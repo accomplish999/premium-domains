@@ -10978,9 +10978,7 @@
       "marketplace": 27567,
       "auctionValue": 1987,
       "brokerage": 57503,
-      "alsoSeenOn": [
-        "dynadot"
-      ],
+      "alsoSeenOn": ["dynadot"],
       "firstSeen": "2026-10-07",
       "lastSeen": "2026-10-07",
       "active": true,

@@ -8281,9 +8281,7 @@
       "marketplace": 27567,
       "auctionValue": 1987,
       "brokerage": 57503,
-      "alsoSeenOn": [
-        "dynadot"
-      ]
+      "alsoSeenOn": ["dynadot"]
     },
     {
       "domain": "immediately.com",

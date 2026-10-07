@@ -1,5 +1,6 @@
 import { mkdirSync, readFileSync, writeFileSync, existsSync } from "node:fs";
 import path from "node:path";
+import prettier from "prettier";
 import {
   dateFromGeneratedAt,
   mergeArchive,
@@ -14,12 +15,14 @@ function readJson<T>(file: string): T {
   return JSON.parse(readFileSync(file, "utf8")) as T;
 }
 
-function writeJson(file: string, value: unknown): void {
+async function writeJson(file: string, value: unknown, config: prettier.Options | null): Promise<void> {
   mkdirSync(path.dirname(file), { recursive: true });
-  writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`);
+  const raw = `${JSON.stringify(value, null, 2)}\n`;
+  const formatted = await prettier.format(raw, { ...config, parser: "json" });
+  writeFileSync(file, formatted);
 }
 
-export function publishResults(webFile: string, root = repoRoot()): void {
+export async function publishResults(webFile: string, root = repoRoot()): Promise<void> {
   const today = readJson<PublishedFile>(webFile);
   const stats = today.stats;
   if (!today.generatedAt || !Array.isArray(today.rows) || !stats || stats.valued < 1 || stats.truncated) {
@@ -34,19 +37,18 @@ export function publishResults(webFile: string, root = repoRoot()): void {
   const indexFile = path.join(historyDir, "index.json");
   const previous = existsSync(archiveFile) ? readJson<ArchiveFile>(archiveFile) : null;
   const index = existsSync(indexFile) ? readJson<HistoryIndex>(indexFile) : { dates: [] };
-  writeJson(resultsFile, today);
-  writeJson(webOut, today);
-  writeJson(path.join(historyDir, `${date}.json`), today);
-  writeJson(indexFile, withHistoryDate(index, date));
-  writeJson(archiveFile, mergeArchive(previous, today));
+  const config = await prettier.resolveConfig(resultsFile);
+  await writeJson(resultsFile, today, config);
+  await writeJson(webOut, today, config);
+  await writeJson(path.join(historyDir, `${date}.json`), today, config);
+  await writeJson(indexFile, withHistoryDate(index, date), config);
+  await writeJson(archiveFile, mergeArchive(previous, today), config);
 }
 
 if (process.argv[1] && process.argv[1].endsWith("publish-results.ts")) {
-  try {
-    publishResults(process.argv[2] ?? "results/web-results.json");
-  } catch (err) {
+  publishResults(process.argv[2] ?? "results/web-results.json").catch((err: unknown) => {
     const message = err instanceof Error ? err.message : String(err);
     console.error(message);
     process.exit(1);
-  }
+  });
 }
