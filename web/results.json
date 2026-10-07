@@ -1,0 +1,13 @@
+{
+  "generatedAt": null,
+  "threshold": 25000,
+  "rows": [],
+  "stats": {
+    "fetched": 0,
+    "kept": 0,
+    "valued": 0,
+    "above": 0,
+    "highestMarketplace": null,
+    "truncated": false
+  }
+}

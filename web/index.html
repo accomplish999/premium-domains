@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>premium-domains</title>
+    <link rel="icon" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="hero-bar">
+        <div class="hero-copy">
+          <p class="kicker">premium-domains</p>
+          <h1>Above the floor.</h1>
+          <p class="sub">
+            Names for sale on the public feeds, kept when the HumbleWorth marketplace estimate is above the floor.
+          </p>
+        </div>
+        <a class="brand" href="https://accompli.sh"
+          ><img src="accomplish-pill.png" alt="Accomplish" width="561" height="132"
+        /></a>
+      </div>
+    </header>
+    <div class="band" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="meta" id="meta">Loading the latest file.</p>
+      <p class="empty" id="empty" hidden>No names in this file are above the floor.</p>
+      <table id="table" hidden>
+        <thead>
+          <tr>
+            <th>Domain</th>
+            <th>Source</th>
+            <th class="num">Price</th>
+            <th>Ends</th>
+            <th class="num">Marketplace</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <footer>
+      <div class="band" aria-hidden="true"></div>
+      <div class="foot-bar">
+        <p>An estimate is not an appraisal. This page does not bid.</p>
+        <p>
+          <a href="https://github.com/accomplish999/premium-domains">Source</a>
+          MIT
+        </p>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

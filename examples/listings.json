@@ -1,0 +1,29 @@
+[
+  {
+    "domain": "thesis.co",
+    "source": "dynadot",
+    "price": 12,
+    "currency": "USD",
+    "auctionEnd": "2026-10-11T00:00:00.000Z",
+    "link": "https://www.dynadot.com/market/auction/thesis.co",
+    "listingType": "auction"
+  },
+  {
+    "domain": "maze.co",
+    "source": "sedo",
+    "price": 40,
+    "currency": "USD",
+    "auctionEnd": null,
+    "link": "https://sedo.com/search/details/?domain=maze.co",
+    "listingType": "marketplace"
+  },
+  {
+    "domain": "blue-gas.com",
+    "source": "godaddy",
+    "price": 1,
+    "currency": "USD",
+    "auctionEnd": null,
+    "link": "https://auctions.godaddy.com/",
+    "listingType": "auction"
+  }
+]

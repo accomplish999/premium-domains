@@ -1,0 +1,46 @@
+{
+  "name": "premium-domains",
+  "version": "0.1.0",
+  "description": "Daily list of premium domains for sale above a HumbleWorth marketplace floor.",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "premium-domains": "./dist/src/cli.js"
+  },
+  "main": "./dist/src/index.js",
+  "files": [
+    "dist",
+    "data",
+    "docs",
+    "web",
+    "examples",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/accomplish999/premium-domains.git"
+  },
+  "homepage": "https://accompli.sh/",
+  "scripts": {
+    "build": "tsc --pretty false",
+    "typecheck": "tsc --noEmit --pretty false",
+    "lint": "prettier --check . && markdownlint-cli2",
+    "format": "prettier --write .",
+    "test": "node --import tsx --test test/*.test.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "links": "tsx scripts/check-links.ts",
+    "copy": "tsx scripts/check-copy.ts",
+    "start": "tsx src/cli.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "markdownlint-cli2": "^0.23.3",
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}

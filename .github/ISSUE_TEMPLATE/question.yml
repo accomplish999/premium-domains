@@ -1,0 +1,12 @@
+name: Question
+description: A question about a feed, a flag, or an estimate.
+title: ""
+labels: []
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Include the command if you ran one. Do not paste a token.
+    validations:
+      required: true

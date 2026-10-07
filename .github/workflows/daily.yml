@@ -1,0 +1,53 @@
+name: daily
+
+on:
+  schedule:
+    - cron: "45 15 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - name: scan
+        run: npx tsx src/cli.ts scan --json --out results --state results/state.json --cache results/cache.json
+        env:
+          REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
+          DROPCATCH_CLIENT_ID: ${{ secrets.DROPCATCH_CLIENT_ID }}
+          DROPCATCH_CLIENT_SECRET: ${{ secrets.DROPCATCH_CLIENT_SECRET }}
+          AFTERNIC_FEED_URL: ${{ secrets.AFTERNIC_FEED_URL }}
+      - name: publish the page file
+        if: success()
+        run: cp results/web-results.json web/results.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: premium-domains-results
+          path: results
+          if-no-files-found: warn
+      - name: commit the list
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results/latest.json results/latest.csv results/new.csv results/state.json web/results.json
+          if git diff --staged --quiet; then
+            echo "no changes"
+          else
+            git commit -m "Update the daily domain list."
+            git push
+          fi
