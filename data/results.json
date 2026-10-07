@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T20:25:29.732Z",
+  "generatedAt": "2026-10-07T20:55:33.884Z",
   "threshold": 25000,
   "rows": [
     {
@@ -2005,6 +2005,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "gratias.mx",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-10-16T23:45:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/gratias.mx",
+      "listingType": "drop",
+      "marketplace": 130393,
+      "auctionValue": 12683,
+      "brokerage": 284513,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "needy.com",
       "source": "atom",
       "price": 499000,
@@ -2512,6 +2525,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "voitures.fr",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=voitures.fr",
+      "listingType": "buynow",
+      "marketplace": 95307,
+      "auctionValue": 9678,
+      "brokerage": 187897,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "grams.com",
       "source": "atom",
       "price": 400000,
@@ -2980,6 +3006,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "sacramento.cn",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-10-08T19:45:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/sacramento.cn",
+      "listingType": "drop",
+      "marketplace": 74342,
+      "auctionValue": 6412,
+      "brokerage": 149475,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "onething.com",
       "source": "atom",
       "price": 150999,
@@ -3185,6 +3224,19 @@
       "marketplace": 68081,
       "auctionValue": 4347,
       "brokerage": 154801,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "vacations.forum",
+      "source": "dynadot",
+      "price": 999,
+      "currency": "USD",
+      "auctionEnd": "2026-10-08T18:42:13.040Z",
+      "link": "https://www.dynadot.com/market/auction/vacations.forum",
+      "listingType": "auction",
+      "marketplace": 68019,
+      "auctionValue": 2513,
+      "brokerage": 165273,
       "alsoSeenOn": []
     },
     {
@@ -4514,6 +4566,32 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "pellets.kaufen",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-10-10T13:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/pellets.kaufen",
+      "listingType": "drop",
+      "marketplace": 46354,
+      "auctionValue": 3609,
+      "brokerage": 96622,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "freelancer.global",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-10-10T13:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/freelancer.global",
+      "listingType": "drop",
+      "marketplace": 46248,
+      "auctionValue": 5859,
+      "brokerage": 89888,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "immortelle.com",
       "source": "atom",
       "price": 49595,
@@ -4589,6 +4667,19 @@
       "marketplace": 45666,
       "auctionValue": 5696,
       "brokerage": 83570,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "promotor.it",
+      "source": "dynadot",
+      "price": 224.98,
+      "currency": "USD",
+      "auctionEnd": "2026-10-09T16:41:47.309Z",
+      "link": "https://www.dynadot.com/market/auction/promotor.it",
+      "listingType": "auction",
+      "marketplace": 45661,
+      "auctionValue": 6075,
+      "brokerage": 83657,
       "alsoSeenOn": []
     },
     {
@@ -4826,6 +4917,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "spokesman.ca",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-10-14T18:45:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/spokesman.ca",
+      "listingType": "drop",
+      "marketplace": 42209,
+      "auctionValue": 5268,
+      "brokerage": 78110,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "foto.travel",
       "source": "dynadot",
       "price": null,
@@ -4982,6 +5086,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "airstrip.ca",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-10-07T18:45:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/airstrip.ca",
+      "listingType": "drop",
+      "marketplace": 40647,
+      "auctionValue": 4557,
+      "brokerage": 77640,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "chic.global",
       "source": "dynadot",
       "price": null,
@@ -4992,6 +5109,19 @@
       "marketplace": 40625,
       "auctionValue": 5465,
       "brokerage": 76226,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "photinia.cn",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-10-07T19:45:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/photinia.cn",
+      "listingType": "drop",
+      "marketplace": 40565,
+      "auctionValue": 4557,
+      "brokerage": 82285,
       "alsoSeenOn": []
     },
     {
@@ -5255,6 +5385,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "bookkeeper.cn",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-10-07T19:45:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/bookkeeper.cn",
+      "listingType": "drop",
+      "marketplace": 38498,
+      "auctionValue": 4287,
+      "brokerage": 72176,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "microbrewery.com",
       "source": "sedo",
       "price": null,
@@ -5398,6 +5541,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "wallboard.cn",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-10-07T19:45:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/wallboard.cn",
+      "listingType": "drop",
+      "marketplace": 37172,
+      "auctionValue": 3540,
+      "brokerage": 72963,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "dossiers.com",
       "source": "atom",
       "price": 157500,
@@ -5502,6 +5658,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "refinance.tips",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-11-05T13:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/refinance.tips",
+      "listingType": "drop",
+      "marketplace": 36338,
+      "auctionValue": 365,
+      "brokerage": 100231,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "smarterliving.com",
       "source": "atom",
       "price": 14995,
@@ -5580,6 +5749,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "spaniels.info",
+      "source": "godaddy",
+      "price": 1,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://auctions.godaddy.com/",
+      "listingType": "auction",
+      "marketplace": 35968,
+      "auctionValue": 2983,
+      "brokerage": 73609,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "betterfinance.com",
       "source": "atom",
       "price": 73995,
@@ -5629,6 +5811,19 @@
       "marketplace": 35809,
       "auctionValue": 1770,
       "brokerage": 83782,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "flamingo.bio",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-11-14T13:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/flamingo.bio",
+      "listingType": "drop",
+      "marketplace": 35808,
+      "auctionValue": 2302,
+      "brokerage": 73531,
       "alsoSeenOn": []
     },
     {
@@ -5772,6 +5967,19 @@
       "marketplace": 35558,
       "auctionValue": 3266,
       "brokerage": 71311,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "gesundheit.fan",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-10-23T13:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/gesundheit.fan",
+      "listingType": "drop",
+      "marketplace": 35509,
+      "auctionValue": 2990,
+      "brokerage": 85622,
       "alsoSeenOn": []
     },
     {
@@ -6110,6 +6318,19 @@
       "marketplace": 34130,
       "auctionValue": 1087,
       "brokerage": 80440,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "geraldine.top",
+      "source": "dynadot",
+      "price": 1,
+      "currency": "USD",
+      "auctionEnd": "2026-10-20T15:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/geraldine.top",
+      "listingType": "auction",
+      "marketplace": 34065,
+      "auctionValue": 3879,
+      "brokerage": 63387,
       "alsoSeenOn": []
     },
     {
@@ -6503,6 +6724,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "vacation.reisen",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-11-19T13:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/vacation.reisen",
+      "listingType": "drop",
+      "marketplace": 32617,
+      "auctionValue": 3033,
+      "brokerage": 66564,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "quickweb.com",
       "source": "atom",
       "price": 35999,
@@ -6594,6 +6828,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "calculator.poker",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-10-30T13:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/calculator.poker",
+      "listingType": "drop",
+      "marketplace": 32308,
+      "auctionValue": 549,
+      "brokerage": 81718,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "southhampshire.com",
       "source": "dynadot",
       "price": 50,
@@ -6656,6 +6903,19 @@
       "marketplace": 32022,
       "auctionValue": 3474,
       "brokerage": 62228,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "economics.xin",
+      "source": "dynadot",
+      "price": 399,
+      "currency": "USD",
+      "auctionEnd": "2026-10-08T14:42:11.617Z",
+      "link": "https://www.dynadot.com/market/auction/economics.xin",
+      "listingType": "auction",
+      "marketplace": 32015,
+      "auctionValue": 2061,
+      "brokerage": 64648,
       "alsoSeenOn": []
     },
     {
@@ -6929,6 +7189,19 @@
       "marketplace": 31209,
       "auctionValue": 1353,
       "brokerage": 74101,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "prometheus.golf",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-10-17T13:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/prometheus.golf",
+      "listingType": "drop",
+      "marketplace": 31165,
+      "auctionValue": 2816,
+      "brokerage": 61742,
       "alsoSeenOn": []
     },
     {
@@ -7215,6 +7488,19 @@
       "marketplace": 30424,
       "auctionValue": 2553,
       "brokerage": 59111,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "antivirus.agency",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-10-11T13:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/antivirus.agency",
+      "listingType": "drop",
+      "marketplace": 30412,
+      "auctionValue": 598,
+      "brokerage": 82627,
       "alsoSeenOn": []
     },
     {
@@ -7774,6 +8060,19 @@
       "marketplace": 28816,
       "auctionValue": 4654,
       "brokerage": 51856,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "hamster.global",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-11-13T13:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/hamster.global",
+      "listingType": "drop",
+      "marketplace": 28816,
+      "auctionValue": 3707,
+      "brokerage": 56596,
       "alsoSeenOn": []
     },
     {
@@ -8856,6 +9155,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "students.mobi",
+      "source": "dynadot",
+      "price": 1,
+      "currency": "USD",
+      "auctionEnd": "2026-11-02T16:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/students.mobi",
+      "listingType": "auction",
+      "marketplace": 26495,
+      "auctionValue": 1173,
+      "brokerage": 56900,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "compare.pro",
       "source": "dynadot",
       "price": null,
@@ -8957,6 +9269,19 @@
       "marketplace": 26368,
       "auctionValue": 2363,
       "brokerage": 52475,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "barefoot.golf",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-10-16T13:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/barefoot.golf",
+      "listingType": "drop",
+      "marketplace": 26358,
+      "auctionValue": 829,
+      "brokerage": 59366,
       "alsoSeenOn": []
     },
     {
@@ -9363,6 +9688,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "scorpio.bet",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-10-25T13:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/scorpio.bet",
+      "listingType": "drop",
+      "marketplace": 25612,
+      "auctionValue": 482,
+      "brokerage": 59285,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "peopletrust.com",
       "source": "atom",
       "price": 24999,
@@ -9425,6 +9763,19 @@
       "marketplace": 25483,
       "auctionValue": 1046,
       "brokerage": 53106,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "roommate.club",
+      "source": "godaddy",
+      "price": 1,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://auctions.godaddy.com/",
+      "listingType": "auction",
+      "marketplace": 25476,
+      "auctionValue": 1543,
+      "brokerage": 53510,
       "alsoSeenOn": []
     },
     {
@@ -9649,6 +10000,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "capturer.cn",
+      "source": "dynadot",
+      "price": null,
+      "currency": null,
+      "auctionEnd": "2026-10-07T19:45:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/capturer.cn",
+      "listingType": "drop",
+      "marketplace": 25191,
+      "auctionValue": 2777,
+      "brokerage": 48599,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "necklets.com",
       "source": "dynadot",
       "price": 300,
@@ -9728,11 +10092,11 @@
     }
   ],
   "stats": {
-    "fetched": 3740996,
-    "kept": 515692,
-    "valued": 500000,
-    "above": 748,
+    "fetched": 3739389,
+    "kept": 515579,
+    "valued": 515579,
+    "above": 776,
     "highestMarketplace": 10037081,
-    "truncated": true
+    "truncated": false
   }
 }

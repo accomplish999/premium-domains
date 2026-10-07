@@ -4,7 +4,7 @@
 
 Public feeds list far more names than clear a valuation floor. This tool reads those feeds, drops the names that would make the model call large, and keeps the names whose HumbleWorth marketplace estimate is above the floor. The floor is 25000 dollars unless you pass another one. Each run replaces today's file. Older runs stay on disk, so the distribution can be read again later.
 
-The scan in the committed `data/results.json` (`generatedAt` 2026-10-07T20:25:29.732Z) read 3,740,996 feed rows. It valued 500,000 of the 515,692 names that passed the prefilter. 748 were above $25,000.
+The scan in the committed `data/results.json` (`generatedAt` 2026-10-07T20:55:33.884Z) read 3,739,389 feed rows. It valued all 515,579 names that passed the prefilter. 776 were above $25,000.
 
 The cheap pass is letters only. On `.com`, `.co`, `.io`, `.sh`, `.ly`, `.org`, `.net`, `.to`, `.gg`, `.ai`, `.me`, `.pro`, `.xyz`, and `.app`, a label of one to six letters passes on length. A longer label on those extensions passes when it is in the word list, when it is two dictionary words joined together, or when it is seven or eight letters that alternate consonant and vowel. A three-letter piece of a compound has to be a common English word. On any other TLD, one to four letters pass, and a longer label passes only when it is in the word list. Digits, hyphens, and extra dots stay out. `--tlds` can still limit the large feeds. park.io and Atom are curated lists, so every letter-only name on those lists is valued, up to 24 letters.
 
