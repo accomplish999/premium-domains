@@ -15,6 +15,7 @@ This is a list. It is not a bid, and it is not an appraisal. An estimate is a mo
 - [Feeds](#feeds)
 - [Output](#output)
 - [Daily run](#daily-run)
+- [Published file](#published-file)
 - [CLI](docs/CLI.md)
 - [Page](#page)
 - [Limits](#limits)
@@ -72,13 +73,39 @@ npx tsx src/cli.ts scan --listings examples/listings.json --values examples/valu
 
 ## Daily run
 
-`.github/workflows/daily.yml` runs at 15:45 UTC and when you start it by hand. GoDaddy refreshes the inventory files in the hour before that. The job uploads `results/` as an artifact. When the process exits 0 it commits the list and `web/results.json`.
+`.github/workflows/daily.yml` runs at 15:45 UTC and when you start it by hand. GoDaddy refreshes the inventory files in the hour before that. The job has `permissions: contents: write`. It caches the HumbleWorth weight layer, values every name that passed the prefilter (`--max-values 100000`), and uploads `results/` as an artifact.
 
-The job values names with the local model. A `REPLICATE_API_TOKEN` secret is optional, and it is used only when `HUMBLEWORTH_BACKEND` is `replicate`. If valuation fails the job exits 3, commits nothing, and the artifact holds the envelope so you can see which feeds answered.
+When the process exits 0 and the file has a `generatedAt`, at least one valued name, and `stats.truncated` false, the job copies that file to `data/results.json` and `web/results.json`. It commits and pushes those two files only when the bytes changed. A failed valuation commits nothing. The artifact still holds the envelope so you can see which feeds answered.
+
+The job values names with the local model. A `REPLICATE_API_TOKEN` secret is optional, and it is used only when `HUMBLEWORTH_BACKEND` is `replicate`. No token is required for the scheduled run.
+
+## Published file
+
+The list the page draws is [data/results.json](data/results.json). The same bytes are in `web/results.json`, which is what a relative fetch reads. The stable public URL is:
+
+https://raw.githubusercontent.com/accomplish999/premium-domains/main/data/results.json
+
+`generatedAt` is an ISO-8601 time. It is null only in the empty placeholder, before a scan has been committed. `threshold` is the marketplace floor in dollars. `rows` is every valued name strictly above that floor, highest marketplace first. `stats` counts the run.
+
+| Field          | Meaning                                                                              |
+| -------------- | ------------------------------------------------------------------------------------ |
+| `domain`       | Lower case, one label and one TLD.                                                   |
+| `marketplace`  | HumbleWorth marketplace estimate, USD. This is the number compared with `threshold`. |
+| `source`       | The feed that supplied the price and the end time.                                   |
+| `link`         | Listing or auction URL.                                                              |
+| `price`        | Current bid or asking price, or null when the feed has no number.                    |
+| `currency`     | As the feed labeled it. Not converted.                                               |
+| `auctionEnd`   | Auction end, or the drop date, as an ISO time. Null when the feed has none.          |
+| `listingType`  | `auction`, `buy_now`, `closeout`, `dropping`, or `marketplace`.                      |
+| `auctionValue` | HumbleWorth auction estimate, USD.                                                   |
+| `brokerage`    | HumbleWorth brokerage estimate, USD.                                                 |
+| `alsoSeenOn`   | Other feeds that had the same domain in this run.                                    |
+
+`stats.fetched` is rows read from the feeds. `stats.kept` is names that passed the prefilter. `stats.valued` is how many of those received a HumbleWorth estimate. `stats.above` is `rows.length`. `stats.highestMarketplace` is the largest marketplace estimate among valued names, including names under the floor. `stats.truncated` is true when `--max-values` left some prefilter names unvalued. The daily job refuses to publish that file.
 
 ## Page
 
-The page is [accompli.sh/premium-domains](https://accompli.sh/premium-domains). `web/` is that static page, in the same black and white as the other Accomplish tools. The wordmark on the page links to [accompli.sh](https://accompli.sh). The page reads `results.json` and draws the table. It does not send a bid. GitHub Pages is not used.
+The page is [accompli.sh/premium-domains](https://accompli.sh/premium-domains). `web/` is that static page, in the same black and white as the other Accomplish tools. The wordmark on the page links to [accompli.sh](https://accompli.sh). The page reads the raw `data/results.json` URL above, then falls back to a relative `results.json`, and draws the table. It does not send a bid. GitHub Pages is not used.
 
 ## Limits
 

@@ -9,3 +9,5 @@ Public feeds for park.io, Dynadot, GoDaddy Auctions, and Sedo. NameJet, SnapName
 HumbleWorth marketplace estimates come from the published `price-predict-v1` weights, run on CPU. `HUMBLEWORTH_BACKEND=replicate` keeps the hosted model. The floor is 25000 dollars. Output is a table, CSV, and JSON, with a new-since-last-run set.
 
 The page is https://accompli.sh/premium-domains. GitHub Pages is not used.
+
+The published list is `data/results.json` (the same bytes as `web/results.json`). The daily job values every prefiltered name with the local model, caches the weights, and pushes that file when it changed.

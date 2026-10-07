@@ -10,23 +10,23 @@ Node 20 or newer.
 
 ## scan
 
-| Flag           | Default              | Meaning                                                                                                                                         |
-| -------------- | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--json`       | off                  | Print the envelope instead of the table.                                                                                                        |
-| `--strict`     | off                  | Exit 3 when any warning is loud.                                                                                                                |
-| `--new`        | off                  | The text table is `newRows` only. JSON still has both lists.                                                                                    |
-| `--threshold`  | `25000`              | Keep a name only when marketplace is above this many dollars.                                                                                   |
-| `--tlds`       | `com,co,io,ai`       | Premium TLDs. A leading dot is ignored.                                                                                                         |
-| `--min-length` | `1`                  | Minimum letters in the label.                                                                                                                   |
-| `--max-length` | `10`                 | Maximum letters in the label.                                                                                                                   |
-| `--max-values` | `500`                | How many prefiltered names to value. Shortest first, then `.com`, `.co`, `.io`, `.ai`, then common English words before rarer dictionary words. |
-| `--sources`    | the default set      | Comma-separated ids. Replaces the default set.                                                                                                  |
-| `--out`        | unset                | Directory for `latest.json`, `latest.csv`, `new.csv`, and `web-results.json`.                                                                   |
-| `--state`      | `results/state.json` | Domains that cleared the floor on the previous successful run.                                                                                  |
-| `--cache`      | `results/cache.json` | HumbleWorth responses. A hit newer than `--cache-days` is not requested again.                                                                  |
-| `--cache-days` | `14`                 | Age after which a cached estimate is requested again.                                                                                           |
-| `--listings`   | unset                | JSON array of listings. Skips every source.                                                                                                     |
-| `--values`     | unset                | JSON object of estimates, keyed by domain. Skips HumbleWorth.                                                                                   |
+| Flag           | Default              | Meaning                                                                                                                                                                                                    |
+| -------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `--json`       | off                  | Print the envelope instead of the table.                                                                                                                                                                   |
+| `--strict`     | off                  | Exit 3 when any warning is loud.                                                                                                                                                                           |
+| `--new`        | off                  | The text table is `newRows` only. JSON still has both lists.                                                                                                                                               |
+| `--threshold`  | `25000`              | Keep a name only when marketplace is above this many dollars.                                                                                                                                              |
+| `--tlds`       | `com,co,io,ai`       | Premium TLDs. A leading dot is ignored.                                                                                                                                                                    |
+| `--min-length` | `1`                  | Minimum letters in the label.                                                                                                                                                                              |
+| `--max-length` | `10`                 | Maximum letters in the label.                                                                                                                                                                              |
+| `--max-values` | `500`                | How many prefiltered names to value. Shortest first, then `.com`, `.co`, `.io`, `.ai`, then common English words before rarer dictionary words. The daily job passes `100000` so the prefilter is not cut. |
+| `--sources`    | the default set      | Comma-separated ids. Replaces the default set.                                                                                                                                                             |
+| `--out`        | unset                | Directory for `latest.json`, `latest.csv`, `new.csv`, and `web-results.json`.                                                                                                                              |
+| `--state`      | `results/state.json` | Domains that cleared the floor on the previous successful run.                                                                                                                                             |
+| `--cache`      | `results/cache.json` | HumbleWorth responses. A hit newer than `--cache-days` is not requested again.                                                                                                                             |
+| `--cache-days` | `14`                 | Age after which a cached estimate is requested again.                                                                                                                                                      |
+| `--listings`   | unset                | JSON array of listings. Skips every source.                                                                                                                                                                |
+| `--values`     | unset                | JSON object of estimates, keyed by domain. Skips HumbleWorth.                                                                                                                                              |
 
 `PREMIUM_DOMAINS_THRESHOLD` and `PREMIUM_DOMAINS_MAX_VALUES` override those two defaults when the flag is absent.
 

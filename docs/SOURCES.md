@@ -70,6 +70,8 @@ The model card says the training data runs through early 2024, the model is fit 
 
 ## Daily run
 
-`.github/workflows/daily.yml` runs at 15:45 UTC, after GoDaddy's inventory refresh window, and on `workflow_dispatch`. It uploads `results/` as an artifact. When the run exits 0 it commits `results/latest.json`, `results/latest.csv`, `results/new.csv`, `results/state.json`, and `web/results.json`.
+`.github/workflows/daily.yml` runs at 15:45 UTC, after GoDaddy's inventory refresh window, and on `workflow_dispatch`. The workflow sets `permissions: contents: write`. It installs `model/requirements.txt`, restores the weight cache at `~/.cache/premium-domains/humbleworth-price-predict-v1`, and values every prefiltered name (`--max-values 100000`). The local model does not stop at the hosted batch size of 2560.
 
-The job installs `model/requirements.txt`, caches the weights, and runs the local model. `REPLICATE_API_TOKEN` is optional. If valuation fails the job exits 3 and commits nothing. The artifact still contains the envelope, including which feeds failed.
+The job uploads `results/` as an artifact. When the run exits 0, `generatedAt` is set, at least one name was valued, and the run was not truncated, it writes that payload to `data/results.json` and `web/results.json`. It commits and pushes those files only when they changed. `REPLICATE_API_TOKEN` is optional. If valuation fails the job exits 3 and commits nothing. The artifact still contains the envelope, including which feeds failed.
+
+The public file is `https://raw.githubusercontent.com/accomplish999/premium-domains/main/data/results.json`. The schema is in the README.

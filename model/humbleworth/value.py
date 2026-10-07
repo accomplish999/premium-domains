@@ -199,8 +199,6 @@ class Predictor:
         from scipy.optimize import curve_fit
 
         cleaned = [domain.strip().lower() for domain in domains if domain.strip()]
-        if len(cleaned) > 2560:
-            cleaned = cleaned[:2560]
         year = self.torch.tensor([[(CURRENT_YEAR - 1990) / (2025 - 1990)]], dtype=self.torch.float)
         rows: list[dict] = []
         with self.torch.no_grad():

@@ -1,4 +1,8 @@
-# Word lists
+# Data
+
+`results.json` is the published scan. The page and `https://raw.githubusercontent.com/accomplish999/premium-domains/main/data/results.json` both read it. The schema is in the repository README. The daily job overwrites it.
+
+## Word lists
 
 `words.txt` is the dictionary the prefilter consults. It is the [dwyl/english-words](https://github.com/dwyl/english-words) `words_alpha.txt` list, cut to letters `a-z` and length 3 through 12. That repository describes its lists as public domain.
 
