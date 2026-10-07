@@ -1,19 +1,17 @@
+/* premium-domains uses the /design directory chrome: paper, ink, mono, checker. */
+
 :root {
   color-scheme: light;
   --ink: #000;
   --paper: #fff;
-  --dither: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4' shape-rendering='crispEdges'><rect width='1' height='1' fill='%23000'/><rect x='2' y='2' width='1' height='1' fill='%23000'/></svg>");
   --checker: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4' shape-rendering='crispEdges'><rect width='2' height='2' fill='%23000'/><rect x='2' y='2' width='2' height='2' fill='%23000'/></svg>");
-}
-
-* {
-  box-sizing: border-box;
+  --band-h: 10px;
 }
 
 html,
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--ink);
   color: var(--ink);
 }
 
@@ -21,201 +19,910 @@ body {
   font-family: ui-monospace, "SFMono-Regular", "Cascadia Mono", "Segoe UI Mono", Menlo, Consolas, monospace;
   font-size: 14px;
   line-height: 1.45;
-  min-height: 100vh;
-  padding-bottom: 88px;
-}
-
-a {
-  color: var(--ink);
 }
 
 ::selection {
-  color: #fff;
   background: #000;
+  color: #fff;
 }
 
-header {
-  background: var(--ink);
-  color: var(--paper);
-  padding: 28px 0;
+.ps,
+.ps *,
+.ps *::before,
+.ps *::after {
+  box-sizing: border-box;
 }
 
-header a,
-footer a {
-  color: var(--paper);
-  text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
+.ps {
+  width: 100%;
+  background: var(--paper);
+  color: var(--ink);
 }
 
-header a:focus-visible,
-footer a:focus-visible,
-a:focus-visible {
-  outline: 2px solid var(--paper);
-  outline-offset: 3px;
+.ps a {
+  color: var(--ink);
 }
 
-a:focus-visible {
-  outline-color: var(--ink);
-}
-
-.hero-bar,
-.wrap,
-.foot-bar {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.hero-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.kicker {
-  margin: 0 0 8px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-size: 12px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 42px;
-  line-height: 0.95;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  max-width: 16ch;
-}
-
-.sub {
-  margin: 14px 0 0;
-  max-width: 48ch;
-}
-
-.brand {
-  flex: 0 0 auto;
-  line-height: 0;
-}
-
-.brand img {
-  display: block;
-  height: 40px;
-  width: auto;
-}
-
-.band {
-  height: 10px;
+.ps-band {
+  height: var(--band-h);
   background-color: var(--paper);
   background-image: var(--checker);
   background-size: 4px 4px;
   image-rendering: pixelated;
 }
 
-.wrap {
-  padding-top: 22px;
-  padding-bottom: 48px;
+.ps-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 32px 0;
 }
 
-.meta {
+.ps-header a {
+  color: var(--paper);
+}
+
+.ps-header a:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 3px;
+}
+
+.ps-header__bar {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px 28px;
-  margin: 0 0 18px;
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
 }
 
-.meta span {
+.ps-header__brand {
+  position: relative;
+  line-height: 0;
   display: block;
+  border-radius: 999px;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-variant-numeric: tabular-nums;
+.ps-header__logo {
+  position: relative;
+  display: block;
+  line-height: 0;
+  border-radius: 999px;
+  overflow: hidden;
 }
 
-th,
-td {
-  text-align: left;
-  vertical-align: baseline;
-  border-top: 1px solid var(--ink);
+.ps-header__logo-flat {
+  display: block;
+  height: 72px;
+  width: auto;
+}
+
+.ps-wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 12px 16px 12px;
+}
+
+.ps-design-hero {
+  margin: 0 0 10px;
+}
+
+.ps-design-hero__title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.ps-design-hero__lede {
+  margin: 10px 0 0;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  line-height: 1.45;
+  max-width: 42em;
+}
+
+.ps-panel {
+  border: 1px solid var(--ink);
+  padding: 0;
+}
+
+.ps-panel__title {
+  margin: 0;
+  padding: 8px 10px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 400;
+  background: var(--ink);
+  color: var(--paper);
+  border-bottom: 1px solid var(--ink);
+}
+
+.ps-panel__title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: var(--ink);
+  color: var(--paper);
+  border-bottom: 1px solid var(--ink);
+}
+
+.ps-panel__title-row .ps-panel__title {
+  border-bottom: none;
+  flex: 1 1 auto;
+}
+
+.ps-panel__meta {
+  margin: 0;
   padding: 8px 10px 8px 0;
-}
-
-th {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-weight: 700;
-}
-
-td.num,
-th.num {
   text-align: right;
-  white-space: nowrap;
+  white-space: normal;
+  color: var(--paper);
 }
 
-td a {
+.ps-updated,
+.ps-empty {
+  margin: 0;
+  padding: 8px 10px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  line-height: 1.45;
+}
+
+/* The status line and the filters read as one block. The only rule is the
+   table's own top edge under the filters. */
+.ps-updated + .ps-toolbar {
+  padding-top: 0;
+}
+
+.ps-toolbar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px 8px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.ps-toolbar input,
+.ps-toolbar select {
+  margin: 0;
+  height: 24px;
+  padding: 0 4px;
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.2;
+  min-width: 0;
+}
+
+.ps-toolbar input::placeholder {
+  color: var(--ink);
+  opacity: 0.6;
+}
+
+#q {
+  width: 7.5rem;
+  flex: 0 1 8rem;
+}
+
+#min {
+  width: 4.75rem;
+  flex: 0 0 auto;
+}
+
+.ps-toolbar select {
+  flex: 0 1 auto;
+  max-width: 8.5rem;
+  padding-right: 2px;
+}
+
+.ps-toolbar input:focus-visible,
+.ps-toolbar select:focus-visible,
+.ps-reset:focus-visible,
+.ps-sort:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 1px;
+}
+
+.ps-toolbar__end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  height: 24px;
+  margin-left: auto;
+  min-width: 0;
+}
+
+.ps-reset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.2;
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+  flex: 0 0 auto;
 }
 
-.empty {
-  border: 1px solid var(--ink);
-  padding: 14px;
+.ps-count {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.ps-sort {
+  display: inline;
   margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  text-align: inherit;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 4;
+.ps-table thead th[aria-sort="descending"] .ps-sort::after {
+  content: " \2193";
+}
+
+.ps-table thead th[aria-sort="ascending"] .ps-sort::after {
+  content: " \2191";
+}
+
+.ps-table-scroll {
+  width: 100%;
+}
+
+/* Domains table, tablet and desktop. Column widths are set in ch of the
+   table font, so every value has its own lane and nothing runs into the
+   next column. Domain takes the rest. Gutters are 12px between columns. */
+.ps-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.ps-table--domains {
+  font-size: 13px;
+}
+
+.ps-table--domains .c-val {
+  width: calc(11ch + 24px);
+}
+
+.ps-table--domains .c-price {
+  width: calc(10ch + 24px);
+}
+
+.ps-table--domains .c-source {
+  width: calc(7ch + 24px);
+}
+
+.ps-table--domains .c-type {
+  width: calc(8ch + 24px);
+}
+
+.ps-table--domains .c-end {
+  width: calc(12ch + 24px);
+}
+
+.ps-table--domains .c-status {
+  width: calc(6ch + 24px);
+}
+
+.ps-table--domains .c-seen {
+  width: calc(14ch + 22px);
+}
+
+.ps-table th,
+.ps-table td {
+  text-align: left;
+  vertical-align: middle;
+  padding: 7px 12px;
+  border-top: 1px solid var(--ink);
+  font-weight: 400;
+  font-size: inherit;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ps-table th:first-child,
+.ps-table td:first-child {
+  padding-left: 10px;
+}
+
+.ps-table thead th:last-child,
+.ps-table tbody td:nth-child(8) {
+  padding-right: 10px;
+}
+
+.ps-table thead th {
+  border-top: none;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.ps-table--domains thead th:nth-child(2),
+.ps-table--domains thead th:nth-child(3),
+.ps-table--domains .ps-num {
+  text-align: right;
+}
+
+.ps-table--domains .ps-num,
+.ps-table--domains .ps-date,
+.ps-count {
+  font-variant-numeric: tabular-nums;
+}
+
+/* A name seen on two feeds lists each marketplace on its own line. */
+.ps-table--domains .ps-src span {
+  display: block;
+}
+
+/* Domain names never break mid-word. Ellipsis is only a safety net. */
+.ps-table--domains th[scope="row"] .ps-link {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow-wrap: normal;
+}
+
+/* The whole domain cell is the hit area, so no extra halo is needed. */
+.ps-table--domains th[scope="row"] .ps-link::after {
+  content: none;
+}
+
+/* Phone-only cells. */
+.ps-table--domains .ps-meta,
+.ps-table--domains .ps-act {
+  display: none;
+}
+
+.ps-link {
+  color: var(--ink);
+  min-width: 0;
+  line-height: 1.75;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--ink);
+  text-underline-offset: 0.2em;
+  text-decoration-skip-ink: auto;
+  overflow-wrap: anywhere;
+}
+
+.ps-link:hover,
+.ps-link:focus-visible {
+  color: var(--ink);
+  outline: none;
+}
+
+.ps-link:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.ps-foot-stack {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: var(--ink);
+}
+
+.ps-footer {
+  position: relative;
   background: var(--ink);
   color: var(--paper);
-  font-size: 12px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  line-height: 1.45;
 }
 
-.foot-bar {
-  padding-top: 10px;
-  padding-bottom: 12px;
+.ps-footer a {
+  color: var(--paper);
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.ps-footer a:focus-visible {
+  outline: 2px solid var(--paper);
+  outline-offset: 3px;
+}
+
+.ps-footer__bar {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 12px 20px calc(14px + env(safe-area-inset-bottom));
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: 16px;
+  font-size: 12px;
 }
 
-.foot-bar p {
+.ps-footer__bar p {
   margin: 0;
 }
 
+.ps-noscript {
+  margin: 0;
+  padding: 12px 16px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: ui-monospace, "SFMono-Regular", "Cascadia Mono", "Segoe UI Mono", Menlo, Consolas, monospace;
+  font-size: 13px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
 @media (max-width: 800px) {
-  header h1 {
-    font-size: 34px;
-    max-width: 100%;
+  .ps-header {
+    padding: 16px 0;
   }
 
-  .brand img {
-    height: 32px;
+  .ps-header__logo-flat {
+    height: 56px;
   }
 
-  .hero-bar,
-  .foot-bar {
+  .ps-wrap {
+    padding: 8px 10px 10px;
+  }
+
+  .ps-design-hero {
+    margin-bottom: 8px;
+  }
+
+  .ps-design-hero__title {
+    font-size: 20px;
+  }
+
+  .ps-design-hero__lede {
+    font-size: 12px;
+  }
+
+  .ps-panel__title {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .ps-panel__meta {
+    padding: 6px 8px 6px 0;
+    font-size: 11px;
+  }
+
+  .ps-updated,
+  .ps-empty {
+    padding: 8px;
+  }
+
+  .ps-toolbar {
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 6px 8px 8px;
+  }
+
+  .ps-toolbar select {
+    max-width: none;
+  }
+
+  #q {
+    width: 8rem;
+    flex: 0 0 auto;
+  }
+
+  .ps-toolbar__end {
+    margin-left: auto;
+  }
+
+  .ps-footer__bar {
+    padding: 10px 12px 12px;
+  }
+}
+
+/* Tablet: a smaller table font and 12px gutters keep all eight columns in
+   lane from 768px up. */
+@media (min-width: 560px) and (max-width: 1023.98px) {
+  .ps-table--domains {
+    font-size: 12px;
+  }
+
+  .ps-table--domains .c-val {
+    width: calc(11ch + 12px);
+  }
+
+  .ps-table--domains .c-price {
+    width: calc(10ch + 12px);
+  }
+
+  .ps-table--domains .c-source {
+    width: calc(7ch + 12px);
+  }
+
+  .ps-table--domains .c-type {
+    width: calc(8ch + 12px);
+  }
+
+  .ps-table--domains .c-end {
+    width: calc(12ch + 12px);
+  }
+
+  .ps-table--domains .c-status {
+    width: calc(6ch + 12px);
+  }
+
+  .ps-table--domains .c-seen {
+    width: calc(14ch + 14px);
+  }
+
+  .ps-table th,
+  .ps-table td {
+    padding: 6px 6px;
+  }
+
+  .ps-table th:first-child,
+  .ps-table td:first-child {
+    padding-left: 8px;
+  }
+
+  .ps-table thead th:last-child,
+  .ps-table tbody td:nth-child(8) {
+    padding-right: 8px;
+  }
+}
+
+/* Narrow tablets and phones held sideways: the full table scrolls inside
+   the panel with the domain pinned, instead of squeezing the columns. */
+@media (min-width: 560px) and (max-width: 767.98px) {
+  .ps-table-scroll {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+  }
+
+  .ps-table--domains {
+    min-width: 760px;
+  }
+
+  .ps-table--domains th:first-child,
+  .ps-table--domains td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: var(--paper);
+  }
+
+  .ps-table--domains thead th:first-child {
+    z-index: 2;
+  }
+}
+
+/* Phones: each domain is a two-line row.
+   Line 1: domain, valuation pushed right.
+   Line 2: ask, marketplace, end date in small type, Buy pushed right.
+   Rows are split by the same thin rule as the homepage tables. */
+@media (max-width: 559.98px) {
+  body {
+    font-size: 12px;
+  }
+
+  .ps-wrap {
+    padding: 6px 8px 8px;
+  }
+
+  .ps-design-hero__title {
+    font-size: 18px;
+    letter-spacing: 0.1em;
+  }
+
+  .ps-panel__title {
+    padding: 6px 8px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  .ps-updated,
+  .ps-empty {
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  /* Filters: search and the minimum on top, then two even columns. */
+  .ps-toolbar {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    padding: 0 8px 8px;
+  }
+
+  .ps-toolbar input,
+  .ps-toolbar select,
+  #q,
+  #min {
+    width: 100%;
+    max-width: none;
+    height: 34px;
+    padding: 0 8px;
+    font-size: 13px;
+  }
+
+  .ps-toolbar select {
+    padding: 0 0 0 6px;
+  }
+
+  #q {
+    order: 1;
+  }
+
+  #min {
+    order: 2;
+  }
+
+  #f-status {
+    order: 3;
+  }
+
+  #f-type {
+    order: 4;
+  }
+
+  #f-source {
+    order: 5;
+  }
+
+  #f-tld {
+    order: 6;
+  }
+
+  #date {
+    order: 7;
+  }
+
+  .ps-toolbar__end {
+    order: 8;
+    height: 34px;
+    margin-left: 0;
+    padding-right: 2px;
+    gap: 12px;
+  }
+
+  .ps-toolbar__end .ps-reset,
+  .ps-count {
+    font-size: 12px;
+  }
+
+  .ps-table-scroll {
+    overflow: visible;
+  }
+
+  .ps-table.ps-table--domains,
+  .ps-table--domains thead,
+  .ps-table--domains tbody {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .ps-table--domains {
+    font-size: 14px;
+  }
+
+  .ps-table--domains colgroup {
+    display: none;
+  }
+
+  /* Header: just the two sort keys that line 1 shows. */
+  .ps-table--domains thead tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+  }
+
+  .ps-table--domains thead th {
+    display: none;
+  }
+
+  .ps-table--domains thead th:nth-child(1),
+  .ps-table--domains thead th:nth-child(2) {
+    display: block;
+    padding: 8px 0;
+    border: 0;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+
+  .ps-table--domains tbody tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "domain value"
+      "meta act";
+    align-items: baseline;
+    column-gap: 12px;
+    row-gap: 3px;
+    padding: 9px 8px 8px;
+    border-top: 1px solid var(--ink);
+  }
+
+  .ps-table.ps-table--domains tbody th,
+  .ps-table.ps-table--domains tbody td {
+    display: none;
+    width: auto;
+    padding: 0;
+    border: 0;
+    line-height: 1.4;
+  }
+
+  .ps-table.ps-table--domains tbody th[scope="row"] {
+    display: block;
+    grid-area: domain;
+    min-width: 0;
+  }
+
+  .ps-table--domains th[scope="row"] .ps-link {
+    line-height: 1.5;
+  }
+
+  .ps-table.ps-table--domains tbody td.ps-val {
+    line-height: 1.5;
+  }
+
+  .ps-table.ps-table--domains tbody td.ps-val {
+    display: block;
+    grid-area: value;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .ps-table.ps-table--domains tbody td.ps-meta {
+    display: block;
+    grid-area: meta;
+    min-width: 0;
+    font-size: 12px;
+    color: #3d3d3d;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .ps-meta span + span::before {
+    content: "\00b7";
+    padding: 0 0.5ch;
+  }
+
+  .ps-table.ps-table--domains tbody td.ps-act {
+    display: block;
+    grid-area: act;
+    overflow: visible;
+    text-align: right;
+    line-height: 1;
+  }
+
+  /* 44px tall tap target. The negative margin keeps the row compact. */
+  .ps-table--domains .ps-buy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 44px;
+    min-height: 44px;
+    margin: -13px 0 -13px -12px;
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: normal;
+    text-decoration-skip-ink: none;
+  }
+
+  .ps-table--domains .ps-link::after {
+    content: none;
+  }
+
+  .ps-footer__bar {
     flex-direction: column;
     align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 359.98px) {
+  .ps-table.ps-table--domains tbody td.ps-meta,
+  .ps-table--domains .ps-buy {
+    font-size: 11px;
   }
 
-  table {
-    display: block;
-    overflow-x: auto;
+  .ps-table--domains tbody tr {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .ps-table--domains thead tr {
+    padding: 0 6px;
+  }
+}
+
+/* Touch screens: 16px fields so iOS does not zoom on focus, and larger
+   hit areas for links that are not in a phone row. */
+@media (pointer: coarse) {
+  .ps-toolbar input,
+  .ps-toolbar select {
+    font-size: 16px;
+  }
+
+  .ps-reset {
+    min-height: 40px;
+  }
+
+  .ps-link {
+    position: relative;
+  }
+
+  .ps-link::after {
+    content: "";
+    position: absolute;
+    inset: -8px -4px;
+  }
+}
+
+@media (pointer: coarse) and (max-width: 559.98px) {
+  .ps-toolbar input,
+  .ps-toolbar select,
+  #q,
+  #min {
+    font-size: 16px;
+  }
+
+  .ps-table--domains .ps-link::after {
+    content: none;
   }
 }
