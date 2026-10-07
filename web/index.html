@@ -3,53 +3,162 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>premium-domains</title>
+    <title>Premium domains | Accomplish</title>
+    <meta
+      name="description"
+      content="A daily list of publicly offered domains whose model-estimated marketplace valuation is above $25k, with history kept."
+    />
+    <link rel="canonical" href="https://accompli.sh/premium-domains/" />
+    <meta property="og:title" content="Premium domains | Accomplish" />
+    <meta
+      property="og:description"
+      content="A daily list of publicly offered domains whose model-estimated marketplace valuation is above $25k, with history kept."
+    />
+    <meta property="og:url" content="https://accompli.sh/premium-domains/" />
+    <meta property="og:site_name" content="Accomplish" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://accompli.sh/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Premium domains | Accomplish" />
+    <meta
+      name="twitter:description"
+      content="A daily list of publicly offered domains whose model-estimated marketplace valuation is above $25k, with history kept."
+    />
+    <meta name="twitter:image" content="https://accompli.sh/og.png" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="light" />
     <link rel="icon" href="favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <div class="hero-bar">
-        <div class="hero-copy">
-          <p class="kicker">premium-domains</p>
-          <h1>Above the floor.</h1>
-          <p class="sub">
-            Names for sale on the public feeds, kept when the HumbleWorth marketplace estimate is above the floor.
-          </p>
+    <div class="ps">
+      <header class="ps-header">
+        <div class="ps-header__bar">
+          <a class="ps-header__brand" href="https://accompli.sh" aria-label="Accomplish home">
+            <span class="ps-header__logo">
+              <img
+                class="ps-header__logo-flat"
+                src="/brand/pill-flat.png"
+                alt="Accomplish"
+                width="2172"
+                height="724"
+                draggable="false"
+              />
+            </span>
+          </a>
         </div>
-        <a class="brand" href="https://accompli.sh"
-          ><img src="accomplish-pill.png" alt="Accomplish" width="561" height="132"
-        /></a>
+      </header>
+
+      <div class="ps-band" aria-hidden="true"></div>
+
+      <main id="site-content" class="ps-wrap" aria-label="Premium domains">
+        <section class="ps-design-hero" aria-labelledby="premium-title">
+          <h1 id="premium-title" class="ps-design-hero__title">Premium domains</h1>
+          <p class="ps-design-hero__lede">
+            A daily list of publicly offered domains whose model-estimated marketplace valuation is above $25k, with
+            history kept.
+          </p>
+        </section>
+
+        <section class="ps-panel" id="panel" aria-labelledby="domains-title" aria-busy="true">
+          <h2 id="domains-title" class="ps-panel__title">Domains</h2>
+          <p class="ps-updated" id="status" role="status">Loading the latest scan.</p>
+          <form id="filters" class="ps-toolbar" hidden>
+            <label class="sr-only" for="q">Domain</label>
+            <input id="q" type="search" name="q" placeholder="Search" autocomplete="off" enterkeyhint="search" />
+            <label class="sr-only" for="f-status">Status</label>
+            <select id="f-status" name="status">
+              <option value="all">Any status</option>
+              <option value="live">Live</option>
+              <option value="past">Past</option>
+            </select>
+            <label class="sr-only" for="f-type">Type</label>
+            <select id="f-type" name="type">
+              <option value="">All types</option>
+            </select>
+            <label class="sr-only" for="f-source">Source</label>
+            <select id="f-source" name="source">
+              <option value="">All sources</option>
+            </select>
+            <label class="sr-only" for="f-tld">TLD</label>
+            <select id="f-tld" name="tld">
+              <option value="">All TLDs</option>
+            </select>
+            <label class="sr-only" for="date">Date</label>
+            <select id="date" name="date">
+              <option value="">All time</option>
+            </select>
+            <label class="sr-only" for="min">Minimum valuation</label>
+            <input id="min" name="min" type="number" inputmode="numeric" min="0" step="1000" placeholder="Min $" />
+            <span class="ps-toolbar__end">
+              <button type="button" class="ps-reset" id="reset" hidden>Reset</button>
+              <span id="result-count" class="ps-count">Loading</span>
+            </span>
+          </form>
+          <p class="ps-empty" id="empty" hidden>No domains above $25k in today's scan</p>
+          <p class="ps-empty" id="nomatch" hidden>No domains match these filters.</p>
+          <div class="ps-table-scroll">
+            <table class="ps-table ps-table--domains" id="table" hidden>
+              <colgroup>
+                <col class="c-domain" />
+                <col class="c-val" />
+                <col class="c-price" />
+                <col class="c-source" />
+                <col class="c-type" />
+                <col class="c-end" />
+                <col class="c-status" />
+                <col class="c-seen" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" aria-sort="none">
+                    <button type="button" class="ps-sort" data-sort="domain">Domain</button>
+                  </th>
+                  <th scope="col" aria-sort="descending">
+                    <button type="button" class="ps-sort" data-sort="marketplace">Valuation</button>
+                  </th>
+                  <th scope="col" aria-sort="none">
+                    <button type="button" class="ps-sort" data-sort="price">Price</button>
+                  </th>
+                  <th scope="col" aria-sort="none">
+                    <button type="button" class="ps-sort" data-sort="source">Source</button>
+                  </th>
+                  <th scope="col" aria-sort="none">
+                    <button type="button" class="ps-sort" data-sort="type">Type</button>
+                  </th>
+                  <th scope="col" aria-sort="none">
+                    <button type="button" class="ps-sort" data-sort="end">Ends / Drops</button>
+                  </th>
+                  <th scope="col" aria-sort="none">
+                    <button type="button" class="ps-sort" data-sort="status">Status</button>
+                  </th>
+                  <th scope="col" aria-sort="none">
+                    <button type="button" class="ps-sort" data-sort="seen">Seen</button>
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="rows"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+      <div class="ps-foot-stack">
+        <div class="ps-band" aria-hidden="true"></div>
+        <footer class="ps-footer">
+          <div class="ps-footer__bar">
+            <p>An estimate is not an appraisal. This page does not bid.</p>
+            <p>
+              <a href="https://github.com/accomplish999/premium-domains">Source</a>
+              MIT
+            </p>
+          </div>
+        </footer>
       </div>
-    </header>
-    <div class="band" aria-hidden="true"></div>
-    <div class="wrap">
-      <p class="meta" id="meta">Loading the latest file.</p>
-      <p class="empty" id="empty" hidden>No names in this file are above the floor.</p>
-      <table id="table" hidden>
-        <thead>
-          <tr>
-            <th>Domain</th>
-            <th>Source</th>
-            <th class="num">Price</th>
-            <th>Ends</th>
-            <th class="num">Marketplace</th>
-            <th>Link</th>
-          </tr>
-        </thead>
-        <tbody id="rows"></tbody>
-      </table>
     </div>
-    <footer>
-      <div class="band" aria-hidden="true"></div>
-      <div class="foot-bar">
-        <p>An estimate is not an appraisal. This page does not bid.</p>
-        <p>
-          <a href="https://github.com/accomplish999/premium-domains">Source</a>
-          MIT
-        </p>
-      </div>
-    </footer>
+    <noscript>
+      <p class="ps-noscript">JavaScript is required to load today's scan.</p>
+    </noscript>
     <script src="app.js"></script>
   </body>
 </html>
