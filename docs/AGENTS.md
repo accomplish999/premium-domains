@@ -58,7 +58,7 @@ A valuation that does not run is `ok: false` and exit 3. `rows` is empty. No nam
 | `auctionValue` | HumbleWorth auction estimate, USD.                                    |
 | `brokerage`    | HumbleWorth brokerage estimate, USD.                                  |
 | `link`         | A page for the listing.                                               |
-| `listingType`  | `auction`, `buy_now`, `closeout`, `dropping`, or `marketplace`.       |
+| `listingType`  | `drop`, `auction`, or `buynow`.                                       |
 
 ## State
 

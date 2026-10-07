@@ -1,4 +1,4 @@
-export type ListingType = "auction" | "buy_now" | "closeout" | "dropping" | "marketplace";
+export type ListingType = "drop" | "auction" | "buynow";
 
 export interface Listing {
   domain: string;
@@ -37,6 +37,8 @@ export interface SourceReport {
   skipped: boolean;
   fetched: number;
   kept: number;
+  valued: number;
+  above: number;
   error?: string;
 }
 

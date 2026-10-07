@@ -10,22 +10,22 @@ import type { Listing } from "../src/types";
 
 const listings: Listing[] = [
   {
-    domain: "thesis.co",
+    domain: "cedar.co",
     source: "dynadot",
     price: 12,
     currency: "USD",
     auctionEnd: "2026-10-11T00:00:00.000Z",
-    link: "https://www.dynadot.com/market/auction/thesis.co",
+    link: "https://www.dynadot.com/market/auction/cedar.co",
     listingType: "auction",
   },
   {
-    domain: "maze.co",
+    domain: "pebble.co",
     source: "sedo",
     price: 40,
     currency: "USD",
     auctionEnd: null,
-    link: "https://sedo.com/search/details/?domain=maze.co",
-    listingType: "marketplace",
+    link: "https://sedo.com/search/details/?domain=pebble.co",
+    listingType: "buynow",
   },
   {
     domain: "blue-gas.com",
@@ -39,8 +39,8 @@ const listings: Listing[] = [
 ];
 
 const values = {
-  "thesis.co": { domain: "thesis.co", auction: 9000, marketplace: 83000, brokerage: 120000 },
-  "maze.co": { domain: "maze.co", auction: 40, marketplace: 310, brokerage: 700 },
+  "cedar.co": { domain: "cedar.co", auction: 9000, marketplace: 83000, brokerage: 120000 },
+  "pebble.co": { domain: "pebble.co", auction: 40, marketplace: 310, brokerage: 700 },
 };
 
 test("help and version", async () => {
@@ -85,13 +85,13 @@ test("fixture scan keeps only the name above the floor", async () => {
   assert.equal(body.tool, "scan");
   assert.deepEqual(
     body.result.rows.map((row) => row.domain),
-    ["thesis.co"],
+    ["cedar.co"],
   );
   assert.equal(body.result.rows[0]?.marketplace, 83000);
   assert.equal(body.result.newRows.length, 1);
   const csv = readFileSync(path.join(dir, "latest.csv"), "utf8");
-  assert.match(csv, /thesis\.co/);
-  assert.doesNotMatch(csv, /maze\.co/);
+  assert.match(csv, /cedar\.co/);
+  assert.doesNotMatch(csv, /pebble\.co/);
   const again = await main([
     "scan",
     "--listings",

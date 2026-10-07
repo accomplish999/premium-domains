@@ -4,7 +4,7 @@ import { test } from "node:test";
 import { parseEuropeanThousands, parseMoney, parseParkStamp } from "../src/domain";
 import { parseDynadotCsv } from "../src/sources/dynadot";
 import { parseGodaddyJson } from "../src/sources/godaddy";
-import { parseParkAuctions, parseParkDomains } from "../src/sources/parkio";
+import { parseParkAuctions, parseParkDomains, parkTldsFromHtml } from "../src/sources/parkio";
 import { parseSedoAuctions, parseSedoTop } from "../src/sources/sedo";
 import { fileLinks, parseInventory } from "../src/sources/download-index";
 import { unzipFirst } from "../src/text";
@@ -12,6 +12,13 @@ import { dedupe } from "../src/dedupe";
 
 test("park.io close stamp is day-month with an EDT offset", () => {
   assert.equal(parseParkStamp("2026-07-10EDT11:00:00000"), "2026-10-07T15:00:00.000Z");
+});
+
+test("park.io html lists drop tlds and ignores pager links", () => {
+  const html =
+    '<a href="/domains/index/io"></a><a href="/domains/index/page:2"></a><a href="/premium-domains/index/sh"></a>';
+  assert.deepEqual(parkTldsFromHtml(html, "domains"), ["io"]);
+  assert.deepEqual(parkTldsFromHtml(html, "premium-domains"), ["sh"]);
 });
 
 test("park.io auction and dropping records", () => {
@@ -22,9 +29,10 @@ test("park.io auction and dropping records", () => {
   assert.equal(auctions.listings[0]?.domain, "jellyfin.co");
   assert.equal(auctions.listings[0]?.price, 99);
   assert.equal(auctions.listings[0]?.auctionEnd, "2026-10-07T16:41:01.000Z");
-  const dropping = parseParkDomains({ domains: [{ name: "baidu.co", date_available: "2026-10-08" }] }, "dropping");
+  const dropping = parseParkDomains({ domains: [{ name: "baidu.co", date_available: "2026-10-08" }] });
   assert.equal(dropping.listings[0]?.auctionEnd, "2026-10-08T00:00:00.000Z");
-  assert.equal(dropping.listings[0]?.listingType, "dropping");
+  assert.equal(dropping.listings[0]?.listingType, "drop");
+  assert.equal(dropping.listings[0]?.link, "https://park.io/domains/view/baidu.co");
 });
 
 test("dynadot csv uses the bid and the end timestamp", () => {
@@ -44,8 +52,8 @@ test("godaddy json price and end time", () => {
   const text = JSON.stringify({
     data: [
       {
-        domainName: "SHOP.IO",
-        link: "https://www.godaddy.com/domain-auctions/shop-io-1",
+        domainName: "AMBER.IO",
+        link: "https://www.godaddy.com/domain-auctions/amber-io-1",
         auctionType: "Bid",
         auctionEndTime: "2026-10-13T16:01:00Z",
         price: "$1,324",
@@ -53,7 +61,7 @@ test("godaddy json price and end time", () => {
     ],
   });
   const parsed = parseGodaddyJson(text, "auction");
-  assert.equal(parsed.listings[0]?.domain, "shop.io");
+  assert.equal(parsed.listings[0]?.domain, "amber.io");
   assert.equal(parsed.listings[0]?.price, 1324);
   assert.equal(parsed.listings[0]?.auctionEnd, "2026-10-13T16:01:00.000Z");
   assert.equal(parsed.listings[0]?.listingType, "auction");
@@ -82,13 +90,13 @@ test("namejet download index ignores the format switch and keeps file links", ()
   assert.deepEqual(fileLinks(html, "https://www.namejet.com/download.action"), [
     "https://www.namejet.com/files/expiring.csv",
   ]);
-  const parsed = parseInventory("domain,price\nmaze.co,15\n", "namejet", (domain) => `https://example.test/${domain}`);
-  assert.equal(parsed.listings[0]?.domain, "maze.co");
+  const parsed = parseInventory("domain,price\ncedar.co,15\n", "namejet", (domain) => `https://example.test/${domain}`);
+  assert.equal(parsed.listings[0]?.domain, "cedar.co");
   assert.equal(parsed.listings[0]?.price, 15);
 });
 
 test("zip reader inflates the first file", () => {
-  const payload = Buffer.from("shop.io,1\n");
+  const payload = Buffer.from("amber.io,1\n");
   const compressed = deflateRawSync(payload);
   const name = Buffer.from("list.csv");
   const header = Buffer.alloc(30);
@@ -100,27 +108,27 @@ test("zip reader inflates the first file", () => {
   header.writeUInt32LE(payload.length, 22);
   header.writeUInt16LE(name.length, 26);
   const zip = Buffer.concat([header, name, compressed]);
-  assert.equal(unzipFirst(zip).toString("utf8"), "shop.io,1\n");
+  assert.equal(unzipFirst(zip).toString("utf8"), "amber.io,1\n");
 });
 
 test("dedupe keeps one row and records the other source", () => {
   const rows = dedupe([
     {
-      domain: "maze.co",
+      domain: "cedar.co",
       source: "sedo",
       price: null,
       currency: null,
       auctionEnd: null,
-      link: "https://sedo.example/maze.co",
-      listingType: "marketplace",
+      link: "https://sedo.example/cedar.co",
+      listingType: "buynow",
     },
     {
-      domain: "maze.co",
+      domain: "cedar.co",
       source: "dynadot",
       price: 20,
       currency: "USD",
       auctionEnd: "2026-10-08T00:00:00.000Z",
-      link: "https://dynadot.example/maze.co",
+      link: "https://dynadot.example/cedar.co",
       listingType: "auction",
     },
   ]);

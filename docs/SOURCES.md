@@ -2,22 +2,24 @@
 
 Each source is an adapter in `src/sources`. `--sources` selects a subset. An adapter that is off by default stays off until you name it.
 
-The prefilter runs before a name is kept from a feed. The label is `a-z` only. One or two letters pass. Three to `--max-length` letters pass only when the label is in `data/words.txt` (plus `data/extra.txt`). The TLD is one of `--tlds`. Hyphens, digits, and extra dots are out. That is the cheap pass. It is there so the valuation call stays small.
+The prefilter runs before a name is kept from a large feed. The label is `a-z` only. One or two letters pass. Three to `--max-length` letters pass only when the label is in `data/words.txt` (plus `data/extra.txt`). The TLD is one of `--tlds`. Hyphens, digits, and extra dots are out. That is the cheap pass. It is there so the valuation call stays small.
+
+park.io does not use that dictionary or that TLD list. The adapter reads every current auction page, every per-TLD drop list, and every per-TLD premium drop list, then keeps letter-only labels up to 24 characters. Digits and hyphens are left out. A drop row has `listingType` `drop` and `auctionEnd` set to the available date. An auction row has `listingType` `auction`.
 
 ## What the live checks showed
 
 Checked from this repository's network on 7 October 2026.
 
-| Id          | Feed                                                                                                                                                | Live result                                                                                                                                                             |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `parkio`    | `https://park.io/auctions.json`, `https://park.io/domains/index/{tld}.json`, `https://park.io/premium-domains.json`                                 | JSON returned. Auctions include price and a close stamp. Drops and the premium list include an available date and no price.                                             |
-| `dynadot`   | Public CSV under `/market/auction/auctions.csv`, `/market/user-auction/user_auctions.csv`, and `/market/pre-expiry-auction/pre_expiry_auctions.csv` | CSV returned, with a bid and an end timestamp.                                                                                                                          |
-| `godaddy`   | `https://inventory.auctions.godaddy.com/` inventory files                                                                                           | `metadata.json` lists the files. The adapter reads the no-adult expiring CSV zip and the closeout JSON zip. No key.                                                     |
-| `sedo`      | `https://sedo.com/txt/auctions_us.txt` and `https://sedo.com/txt/topdomains_us.txt`                                                                 | Partner text feeds returned. Auction lines are semicolon-separated. The top list uses `~` and a thousands dot, so `54.000 EUR` is 54000 EUR. `Make offer` has no price. |
-| `namejet`   | `https://www.namejet.com/download.action?format=csv`                                                                                                | The index lists `file_dl.sn` CSV links. Downloading those files returned HTTP 403 (Cloudflare). A different Accept header can instead get an error page.                |
-| `snapnames` | `https://www.snapnames.com/download.action?format=csv`                                                                                              | HTTP 403 from this network. NameJet and SnapNames share an inventory.                                                                                                   |
-| `dropcatch` | `POST https://api.dropcatch.com/Authorize`, then `GET /v2/downloads/auctions/AllAuctions?fileType=Csv`                                              | Not called without keys. The interactive docs are at `https://api.dropcatch.com/documentation`.                                                                         |
-| `afternic`  | none                                                                                                                                                | Off. Afternic does not publish a public catalog. Buyer search is delegated to GoDaddy.                                                                                  |
+| Id          | Feed                                                                                                                                                | Live result                                                                                                                                                                                          |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `parkio`    | `https://park.io/auctions.json`, `https://park.io/domains/index/{tld}.json`, `https://park.io/premium-domains/index/{tld}.json`                     | JSON, paginated. Auctions include a price and a close stamp. Drop lists and premium drop lists include an available date and no price. The TLD set is read from the public HTML and a fallback list. |
+| `dynadot`   | Public CSV under `/market/auction/auctions.csv`, `/market/user-auction/user_auctions.csv`, and `/market/pre-expiry-auction/pre_expiry_auctions.csv` | CSV returned, with a bid and an end timestamp.                                                                                                                                                       |
+| `godaddy`   | `https://inventory.auctions.godaddy.com/` inventory files                                                                                           | `metadata.json` lists the files. The adapter reads the no-adult expiring CSV zip and the closeout JSON zip. No key.                                                                                  |
+| `sedo`      | `https://sedo.com/txt/auctions_us.txt` and `https://sedo.com/txt/topdomains_us.txt`                                                                 | Partner text feeds returned. Auction lines are semicolon-separated. The top list uses `~` and a thousands dot, so `54.000 EUR` is 54000 EUR. `Make offer` has no price.                              |
+| `namejet`   | `https://www.namejet.com/download.action?format=csv`                                                                                                | The index lists `file_dl.sn` CSV links. Downloading those files returned HTTP 403 (Cloudflare). A different Accept header can instead get an error page.                                             |
+| `snapnames` | `https://www.snapnames.com/download.action?format=csv`                                                                                              | HTTP 403 from this network. NameJet and SnapNames share an inventory.                                                                                                                                |
+| `dropcatch` | `POST https://api.dropcatch.com/Authorize`, then `GET /v2/downloads/auctions/AllAuctions?fileType=Csv`                                              | Not called without keys. The interactive docs are at `https://api.dropcatch.com/documentation`.                                                                                                      |
+| `afternic`  | none                                                                                                                                                | Off. Afternic does not publish a public catalog. Buyer search is delegated to GoDaddy.                                                                                                               |
 
 A feed that fails is a loud warning. The run keeps the feeds that worked.
 
@@ -55,7 +57,7 @@ python3 model/humbleworth/value.py --warm
 
 - Endpoint: `POST https://api.replicate.com/v1/models/humbleworth/price-predict-v1/predictions`
 - Auth: `Authorization: Bearer` and `REPLICATE_API_TOKEN`
-- Input: `{ "input": { "domains": "thesis.co,compound.co" } }`
+- Input: `{ "input": { "domains": "cedar.co,river.co" } }`
 - Batch: up to 2560 names
 - Price on Replicate: about $0.10 per 1000 predictions, billed by Replicate
 - Docs: `https://humbleworth.com/about/api`
@@ -72,6 +74,8 @@ The model card says the training data runs through early 2024, the model is fit 
 
 `.github/workflows/daily.yml` runs at 15:45 UTC, after GoDaddy's inventory refresh window, and on `workflow_dispatch`. The workflow sets `permissions: contents: write`. It installs `model/requirements.txt`, restores the weight cache at `~/.cache/premium-domains/humbleworth-price-predict-v1`, and values every prefiltered name (`--max-values 100000`). The local model does not stop at the hosted batch size of 2560.
 
-The job uploads `results/` as an artifact. When the run exits 0, `generatedAt` is set, at least one name was valued, and the run was not truncated, it writes that payload to `data/results.json` and `web/results.json`. It commits and pushes those files only when they changed. `REPLICATE_API_TOKEN` is optional. If valuation fails the job exits 3 and commits nothing. The artifact still contains the envelope, including which feeds failed.
+The job uploads `results/` as an artifact. When the run exits 0, `generatedAt` is set, at least one name was valued, and the run was not truncated, it writes that payload to `data/results.json` and `web/results.json`, copies it to `data/history/YYYY-MM-DD.json`, refreshes `data/history/index.json`, and merges `data/archive.json`. It commits and pushes those paths only when they changed. It does not delete history files. `REPLICATE_API_TOKEN` is optional. If valuation fails the job exits 3 and commits nothing. The artifact still contains the envelope, including which feeds failed.
+
+Dynadot's public CSV set already includes expired auctions, user auctions, and pre-expiry auctions. The backorder and last-chance URLs answered with HTML, not a CSV, so they are not fetched. GoDaddy's public inventory already includes the no-adult expiring auctions and the closeout file.
 
 The public file is `https://raw.githubusercontent.com/accomplish999/premium-domains/main/data/results.json`. The schema is in the README.

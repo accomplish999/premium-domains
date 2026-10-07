@@ -1,6 +1,6 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { candidateRank, compareRank, keepDomain, type FilterOptions } from "./filter";
+import { candidateRank, compareRank, keepListing, type FilterOptions } from "./filter";
 import { dedupe } from "./dedupe";
 import { readCache, readState, writeCache, writeState, type CachedValuation } from "./state";
 import { resolveSources } from "./sources/registry";
@@ -50,15 +50,17 @@ export async function scan(options: ScanOptions): Promise<Envelope> {
       ok: true,
       skipped: false,
       fetched: options.listings.length,
-      kept: options.listings.filter((listing) => keepDomain(listing.domain, filter)).length,
+      kept: options.listings.filter((listing) => keepListing(listing, filter)).length,
+      valued: 0,
+      above: 0,
     });
-    listings.push(...options.listings.filter((listing) => keepDomain(listing.domain, filter)));
+    listings.push(...options.listings.filter((listing) => keepListing(listing, filter)));
   } else {
     for (const adapter of adapters) {
       try {
         const loaded = await adapter.load({ fetch: options.fetch, env: options.env, filter, now: options.now });
         warnings.push(...loaded.warnings);
-        const kept = loaded.listings.filter((listing) => keepDomain(listing.domain, filter));
+        const kept = loaded.listings.filter((listing) => keepListing(listing, filter));
         listings.push(...kept);
         reports.push({
           id: adapter.id,
@@ -67,6 +69,8 @@ export async function scan(options: ScanOptions): Promise<Envelope> {
           skipped: loaded.skipped,
           fetched: loaded.fetched,
           kept: kept.length,
+          valued: 0,
+          above: 0,
         });
       } catch (err) {
         const message = err instanceof Error ? err.message : String(err);
@@ -78,6 +82,8 @@ export async function scan(options: ScanOptions): Promise<Envelope> {
           skipped: false,
           fetched: 0,
           kept: 0,
+          valued: 0,
+          above: 0,
           error: message,
         });
       }
@@ -125,6 +131,7 @@ export async function scan(options: ScanOptions): Promise<Envelope> {
   }
 
   const rows: ValuedListing[] = [];
+  const parkioValued: ValuedListing[] = [];
   let highest: number | null = null;
   let valued = 0;
   if (valuedOk) {
@@ -132,9 +139,10 @@ export async function scan(options: ScanOptions): Promise<Envelope> {
       const value = cache.get(listing.domain);
       if (!value) continue;
       valued++;
+      const report = reports.find((item) => item.id === listing.source);
+      if (report) report.valued += 1;
       if (highest === null || value.marketplace > highest) highest = value.marketplace;
-      if (value.marketplace <= options.threshold) continue;
-      rows.push({
+      const valuedRow: ValuedListing = {
         domain: listing.domain,
         source: listing.source,
         price: listing.price,
@@ -146,10 +154,15 @@ export async function scan(options: ScanOptions): Promise<Envelope> {
         auctionValue: value.auction,
         brokerage: value.brokerage,
         alsoSeenOn: listing.alsoSeenOn,
-      });
+      };
+      if (listing.source === "parkio") parkioValued.push(valuedRow);
+      if (value.marketplace <= options.threshold) continue;
+      if (report) report.above += 1;
+      rows.push(valuedRow);
     }
   }
   rows.sort((a, b) => b.marketplace - a.marketplace || a.domain.localeCompare(b.domain));
+  parkioValued.sort((a, b) => b.marketplace - a.marketplace || a.domain.localeCompare(b.domain));
 
   const previous = readState(options.statePath);
   const newRows = rows.filter((row) => !previous.has(row.domain));
@@ -186,7 +199,10 @@ export async function scan(options: ScanOptions): Promise<Envelope> {
     );
     if (!options.values) writeCache(options.cachePath, cache);
   }
-  if (options.outDir) writeOutputs(options.outDir, envelope, new Set(newRows.map((row) => row.domain)));
+  if (options.outDir) {
+    writeOutputs(options.outDir, envelope, new Set(newRows.map((row) => row.domain)));
+    writeFileSync(path.join(options.outDir, "parkio-valued.json"), `${JSON.stringify(parkioValued, null, 2)}\n`);
+  }
   return envelope;
 }
 

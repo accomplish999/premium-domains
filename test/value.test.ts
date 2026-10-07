@@ -17,7 +17,7 @@ test("marketplace is the field the threshold uses", () => {
 test("replicate output wrapper is unwrapped", () => {
   const values = parseValuations({
     status: "succeeded",
-    output: { valuations: [{ domain: "thesis.co", auction: 1000, marketplace: 40000, brokerage: 80000 }] },
+    output: { valuations: [{ domain: "cedar.co", auction: 1000, marketplace: 40000, brokerage: 80000 }] },
   });
   assert.equal(values[0]?.marketplace, 40000);
 });

@@ -20,8 +20,7 @@ interface GodaddyRow {
 
 export function listingTypeFrom(raw: string | undefined, fallback: ListingType): ListingType {
   const text = (raw ?? "").toLowerCase();
-  if (text.includes("close")) return "closeout";
-  if (text.includes("buy") || text.includes("offer") || text.includes("bin")) return "buy_now";
+  if (text.includes("close") || text.includes("buy") || text.includes("offer") || text.includes("bin")) return "buynow";
   if (text.includes("bid") || text.includes("auction")) return "auction";
   return fallback;
 }
@@ -110,7 +109,7 @@ export const godaddy: SourceAdapter = {
         failures.push(`${url} ${explainStatus(response.status, response.text)}`);
         continue;
       }
-      const fallback: ListingType = url.includes("closeout") ? "closeout" : "auction";
+      const fallback: ListingType = url.includes("closeout") ? "buynow" : "auction";
       const decoded = decodeFeed(response.bytes, url);
       const parsed =
         decoded.kind === "json" ? parseGodaddyJson(decoded.text, fallback) : parseGodaddyCsv(decoded.text, fallback);

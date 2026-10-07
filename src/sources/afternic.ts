@@ -24,7 +24,7 @@ export function parseAfternicCsv(text: string): { listings: Listing[]; fetched: 
       currency: money ? (money.currency ?? "USD") : null,
       auctionEnd: null,
       link: `https://www.afternic.com/domain/${encodeURIComponent(domain)}`,
-      listingType: "marketplace",
+      listingType: "buynow",
     });
   }
   return { listings, fetched };

@@ -1,21 +1,21 @@
 [
   {
-    "domain": "thesis.co",
+    "domain": "cedar.co",
     "source": "dynadot",
     "price": 12,
     "currency": "USD",
     "auctionEnd": "2026-10-11T00:00:00.000Z",
-    "link": "https://www.dynadot.com/market/auction/thesis.co",
+    "link": "https://www.dynadot.com/market/auction/cedar.co",
     "listingType": "auction"
   },
   {
-    "domain": "maze.co",
+    "domain": "pebble.co",
     "source": "sedo",
     "price": 40,
     "currency": "USD",
     "auctionEnd": null,
-    "link": "https://sedo.com/search/details/?domain=maze.co",
-    "listingType": "marketplace"
+    "link": "https://sedo.com/search/details/?domain=pebble.co",
+    "listingType": "buynow"
   },
   {
     "domain": "blue-gas.com",

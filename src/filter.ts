@@ -18,6 +18,19 @@ export function keepDomain(domain: string, options: FilterOptions): boolean {
   return options.words.dictionary.has(parts.label);
 }
 
+/** Letter-only names on the park.io lists. Digits and hyphens are junk. The dictionary and the four-TLD pass do not apply. */
+export function keepParkDomain(domain: string): boolean {
+  const parts = splitDomain(domain);
+  if (!parts) return false;
+  if (!/^[a-z]+$/.test(parts.label)) return false;
+  return parts.label.length >= 1 && parts.label.length <= 24;
+}
+
+export function keepListing(listing: { domain: string; source: string }, options: FilterOptions): boolean {
+  if (listing.source === "parkio") return keepParkDomain(listing.domain);
+  return keepDomain(listing.domain, options);
+}
+
 export function candidateRank(domain: string, words: WordLists): [number, number, number, string] {
   const parts = splitDomain(domain);
   const label = parts?.label ?? domain;

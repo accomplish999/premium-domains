@@ -56,7 +56,7 @@ export function parseSedoTop(text: string): { listings: Listing[]; fetched: numb
       currency: money?.currency ?? null,
       auctionEnd: null,
       link: `https://sedo.com/search/details/?domain=${encodeURIComponent(domain)}`,
-      listingType: "marketplace",
+      listingType: "buynow",
     });
   }
   return { listings, fetched };

@@ -1,4 +1,4 @@
 {
-  "thesis.co": { "domain": "thesis.co", "auction": 9000, "marketplace": 83000, "brokerage": 120000 },
-  "maze.co": { "domain": "maze.co", "auction": 40, "marketplace": 310, "brokerage": 700 }
+  "cedar.co": { "domain": "cedar.co", "auction": 9000, "marketplace": 83000, "brokerage": 120000 },
+  "pebble.co": { "domain": "pebble.co", "auction": 40, "marketplace": 310, "brokerage": 700 }
 }

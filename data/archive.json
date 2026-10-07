@@ -13,7 +13,11 @@
       "marketplace": 12437418,
       "auctionValue": 1679296,
       "brokerage": 18255593,
-      "alsoSeenOn": []
+      "alsoSeenOn": [],
+      "firstSeen": "2026-10-07",
+      "lastSeen": "2026-10-07",
+      "active": true,
+      "sightings": 1
     },
     {
       "domain": "venezuela.com",
@@ -26,7 +30,11 @@
       "marketplace": 4085453,
       "auctionValue": 484420,
       "brokerage": 7270757,
-      "alsoSeenOn": []
+      "alsoSeenOn": [],
+      "firstSeen": "2026-10-07",
+      "lastSeen": "2026-10-07",
+      "active": true,
+      "sightings": 1
     },
     {
       "domain": "chop.com",
@@ -39,7 +47,11 @@
       "marketplace": 594423,
       "auctionValue": 54699,
       "brokerage": 1162918,
-      "alsoSeenOn": []
+      "alsoSeenOn": [],
+      "firstSeen": "2026-10-07",
+      "lastSeen": "2026-10-07",
+      "active": true,
+      "sightings": 1
     },
     {
       "domain": "electron.com",
@@ -52,7 +64,11 @@
       "marketplace": 482331,
       "auctionValue": 44942,
       "brokerage": 994378,
-      "alsoSeenOn": []
+      "alsoSeenOn": [],
+      "firstSeen": "2026-10-07",
+      "lastSeen": "2026-10-07",
+      "active": true,
+      "sightings": 1
     },
     {
       "domain": "compliment.com",
@@ -65,7 +81,11 @@
       "marketplace": 188583,
       "auctionValue": 21229,
       "brokerage": 381413,
-      "alsoSeenOn": []
+      "alsoSeenOn": [],
+      "firstSeen": "2026-10-07",
+      "lastSeen": "2026-10-07",
+      "active": true,
+      "sightings": 1
     },
     {
       "domain": "immigrant.com",
@@ -78,7 +98,11 @@
       "marketplace": 123670,
       "auctionValue": 14538,
       "brokerage": 238515,
-      "alsoSeenOn": []
+      "alsoSeenOn": [],
+      "firstSeen": "2026-10-07",
+      "lastSeen": "2026-10-07",
+      "active": true,
+      "sightings": 1
     },
     {
       "domain": "taxon.com",
@@ -91,7 +115,11 @@
       "marketplace": 78155,
       "auctionValue": 8973,
       "brokerage": 146497,
-      "alsoSeenOn": []
+      "alsoSeenOn": [],
+      "firstSeen": "2026-10-07",
+      "lastSeen": "2026-10-07",
+      "active": true,
+      "sightings": 1
     },
     {
       "domain": "snort.com",
@@ -104,7 +132,11 @@
       "marketplace": 77490,
       "auctionValue": 8920,
       "brokerage": 146129,
-      "alsoSeenOn": []
+      "alsoSeenOn": [],
+      "firstSeen": "2026-10-07",
+      "lastSeen": "2026-10-07",
+      "active": true,
+      "sightings": 1
     },
     {
       "domain": "ventilator.com",
@@ -117,7 +149,11 @@
       "marketplace": 73734,
       "auctionValue": 4693,
       "brokerage": 156812,
-      "alsoSeenOn": []
+      "alsoSeenOn": [],
+      "firstSeen": "2026-10-07",
+      "lastSeen": "2026-10-07",
+      "active": true,
+      "sightings": 1
     },
     {
       "domain": "laughing.com",
@@ -130,7 +166,11 @@
       "marketplace": 67957,
       "auctionValue": 8204,
       "brokerage": 126194,
-      "alsoSeenOn": []
+      "alsoSeenOn": [],
+      "firstSeen": "2026-10-07",
+      "lastSeen": "2026-10-07",
+      "active": true,
+      "sightings": 1
     },
     {
       "domain": "job.pro",
@@ -143,7 +183,11 @@
       "marketplace": 60208,
       "auctionValue": 5021,
       "brokerage": 124128,
-      "alsoSeenOn": []
+      "alsoSeenOn": [],
+      "firstSeen": "2026-10-07",
+      "lastSeen": "2026-10-07",
+      "active": true,
+      "sightings": 1
     },
     {
       "domain": "on.pro",
@@ -156,7 +200,11 @@
       "marketplace": 29902,
       "auctionValue": 2680,
       "brokerage": 60265,
-      "alsoSeenOn": []
+      "alsoSeenOn": [],
+      "firstSeen": "2026-10-07",
+      "lastSeen": "2026-10-07",
+      "active": true,
+      "sightings": 1
     },
     {
       "domain": "sexs.pro",
@@ -169,15 +217,11 @@
       "marketplace": 27567,
       "auctionValue": 1987,
       "brokerage": 57503,
-      "alsoSeenOn": []
+      "alsoSeenOn": [],
+      "firstSeen": "2026-10-07",
+      "lastSeen": "2026-10-07",
+      "active": true,
+      "sightings": 1
     }
-  ],
-  "stats": {
-    "fetched": 1749748,
-    "kept": 13431,
-    "valued": 13431,
-    "above": 13,
-    "highestMarketplace": 12437418,
-    "truncated": false
-  }
+  ]
 }
