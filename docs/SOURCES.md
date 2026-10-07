@@ -29,7 +29,7 @@ Read from the environment. Do not commit them. A missing optional key skips that
 
 | Variable                  | Source                                                                                                  |
 | ------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `REPLICATE_API_TOKEN`     | HumbleWorth. Required for a live estimate.                                                              |
+| `REPLICATE_API_TOKEN`     | HumbleWorth hosted model. Used only when `HUMBLEWORTH_BACKEND=replicate`.                               |
 | `DROPCATCH_CLIENT_ID`     | DropCatch API client id.                                                                                |
 | `DROPCATCH_CLIENT_SECRET` | DropCatch API client secret.                                                                            |
 | `AFTERNIC_FEED_URL`       | Optional CSV you are allowed to read. Turns the Afternic adapter on when you pass `--sources afternic`. |
@@ -40,7 +40,18 @@ Create the DropCatch client at `https://www.dropcatch.com/account/api-management
 
 The estimate this list uses is the marketplace figure. HumbleWorth's own docs define it as the direct marketplace sale, the 97.5th percentile of the model. Auction is the 50th percentile. Brokerage is the 99.25th percentile. The floor applies to marketplace only.
 
-The documented bulk API is the Replicate model `humbleworth/price-predict-v1`.
+The default backend is the published `humbleworth/price-predict-v1` checkpoint, run here on CPU. Replicate's model page describes that network (MiniLM encoders, a small prediction head, and a tanh price curve) and publishes the image at `r8.im/humbleworth/price-predict-v1`. Version `a925db842c707850e4ca7b7e86b217692b0353a9ca05eb028802c4a85db93843` is public without a token. `model/humbleworth/value.py` downloads the layer that holds the weights and caches them under `~/.cache/premium-domains/humbleworth-price-predict-v1` (or `PREMIUM_DOMAINS_MODEL_DIR`).
+
+Hugging Face has `humbleworth/domain-mlm`, `humbleworth/tld-embedding`, and `humbleworth/reformer-character-domain-generator`. None of those is this price head. The head weights are only in the image.
+
+Install the CPU runtime once:
+
+```bash
+pip install -r model/requirements.txt
+python3 model/humbleworth/value.py --warm
+```
+
+`HUMBLEWORTH_BACKEND=replicate` uses the hosted model instead.
 
 - Endpoint: `POST https://api.replicate.com/v1/models/humbleworth/price-predict-v1/predictions`
 - Auth: `Authorization: Bearer` and `REPLICATE_API_TOKEN`
@@ -51,9 +62,9 @@ The documented bulk API is the Replicate model `humbleworth/price-predict-v1`.
 
 The response object has `valuations[]` with `domain`, `auction`, `marketplace`, and `brokerage`. A Replicate prediction wraps that object in `output`. The parser accepts both.
 
-The older host `valuation.humbleworth.com` does not complete a TLS handshake from this network. `POST https://humbleworth.com/api/valuation` returns HTTP 429 with a Vercel challenge, not a valuation. The free page at `https://humbleworth.com/valuation/bulk` is for a browser session. This program does not solve that challenge. Set the token.
+The older host `valuation.humbleworth.com` does not complete a TLS handshake from this network. `POST https://humbleworth.com/api/valuation` returns HTTP 429 with a Vercel challenge, not a valuation. The free page at `https://humbleworth.com/valuation/bulk` is for a browser session. This program does not solve that challenge.
 
-Estimates are cached in `--cache` for `--cache-days` (14). A repeated daily run does not pay for a name that was valued inside that window.
+Estimates are cached in `--cache` for `--cache-days` (14). A repeated daily run does not revalue a name that was valued inside that window.
 
 The model card says the training data runs through early 2024, the model is fit to English names, and it does not score trademark risk. A marketplace estimate is not an appraisal and not a bid.
 
@@ -61,4 +72,4 @@ The model card says the training data runs through early 2024, the model is fit 
 
 `.github/workflows/daily.yml` runs at 15:45 UTC, after GoDaddy's inventory refresh window, and on `workflow_dispatch`. It uploads `results/` as an artifact. When the run exits 0 it commits `results/latest.json`, `results/latest.csv`, `results/new.csv`, `results/state.json`, and `web/results.json`.
 
-Add `REPLICATE_API_TOKEN` as a repository secret or the job exits 3 and commits nothing. The artifact still contains the envelope, including which feeds failed.
+The job installs `model/requirements.txt`, caches the weights, and runs the local model. `REPLICATE_API_TOKEN` is optional. If valuation fails the job exits 3 and commits nothing. The artifact still contains the envelope, including which feeds failed.

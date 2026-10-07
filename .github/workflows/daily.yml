@@ -15,14 +15,28 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: model/requirements.txt
       - run: npm ci
+      - name: install the valuation runtime
+        run: pip install -r model/requirements.txt
+      - name: cache the HumbleWorth weights
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/premium-domains/humbleworth-price-predict-v1
+          key: humbleworth-price-predict-v1-a925db84-4d8953c6
+      - name: warm the valuation model
+        run: python3 model/humbleworth/value.py --warm
       - name: scan
         run: npx tsx src/cli.ts scan --json --out results --state results/state.json --cache results/cache.json
         env:

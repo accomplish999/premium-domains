@@ -42,7 +42,7 @@
 
 A source that returns HTTP 500 is a loud `SOURCE_FAILED` warning. The other sources still contribute rows. Exit 0 unless `--strict`.
 
-HumbleWorth missing is `ok: false` and exit 3. `rows` is empty. No name is printed as if it had cleared the floor.
+A valuation that does not run is `ok: false` and exit 3. `rows` is empty. No name is printed as if it had cleared the floor.
 
 ## Row
 

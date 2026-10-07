@@ -1,5 +1,6 @@
 import { explainStatus, request, type FetchLike } from "../http";
 import type { Valuation } from "../types";
+import { valueLocal } from "./local";
 
 const REPLICATE_MODEL = "https://api.replicate.com/v1/models/humbleworth/price-predict-v1/predictions";
 const REPLICATE_VERSION = "a925db842c707850e4ca7b7e86b217692b0353a9ca05eb028802c4a85db93843";
@@ -67,14 +68,35 @@ export async function valueDomains(
   env: NodeJS.ProcessEnv,
 ): Promise<Valuation[]> {
   if (domains.length === 0) return [];
+  const backend = env.HUMBLEWORTH_BACKEND?.trim() || "local";
   const token = env.REPLICATE_API_TOKEN?.trim();
-  if (token) return valueReplicate(domains, fetchImpl, token);
+  if (backend !== "local" && backend !== "replicate") {
+    throw new Error("HUMBLEWORTH_BACKEND must be local or replicate.");
+  }
+  const failures: string[] = [];
+  if (backend === "local") {
+    const local = await valueLocal(domains, env);
+    if (local.ok) return parseValuations(local.body);
+    failures.push(local.error);
+    if (token) {
+      try {
+        return await valueReplicate(domains, fetchImpl, token);
+      } catch (err) {
+        failures.push(err instanceof Error ? err.message : String(err));
+      }
+    }
+  } else if (!token) {
+    throw new Error("HUMBLEWORTH_BACKEND=replicate needs REPLICATE_API_TOKEN.");
+  } else {
+    return valueReplicate(domains, fetchImpl, token);
+  }
   const site = await valuePost(SITE_URL, domains, fetchImpl, SITE_BATCH);
   if (site) return site;
   const legacy = await valuePost(LEGACY_URL, domains, fetchImpl, 20);
   if (legacy) return legacy;
+  const detail = failures.filter(Boolean).join(" ");
   throw new Error(
-    "HumbleWorth valuation is unavailable. Set REPLICATE_API_TOKEN. The documented bulk API is the Replicate model humbleworth/price-predict-v1. The free site at humbleworth.com did not return a valuation body from this network.",
+    `HumbleWorth valuation is unavailable. ${detail} The default backend is the published price-predict-v1 weights, run on CPU. HUMBLEWORTH_BACKEND=replicate with REPLICATE_API_TOKEN uses the hosted model instead. The free site at humbleworth.com did not return a valuation body from this network.`,
   );
 }
 

@@ -17,6 +17,7 @@
     "docs",
     "web",
     "examples",
+    "model",
     "LICENSE",
     "README.md"
   ],
@@ -24,7 +25,7 @@
     "type": "git",
     "url": "git+https://github.com/accomplish999/premium-domains.git"
   },
-  "homepage": "https://accompli.sh/",
+  "homepage": "https://accompli.sh/premium-domains",
   "scripts": {
     "build": "tsc --pretty false",
     "typecheck": "tsc --noEmit --pretty false",

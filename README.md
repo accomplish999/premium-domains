@@ -1,6 +1,6 @@
 # premium-domains
 
-[![Accomplish](web/wordmark.png)](https://accompli.sh)
+[![Accomplish](web/wordmark.png)](https://accompli.sh/premium-domains)
 
 A name clears the list when a public feed is offering it and the HumbleWorth marketplace estimate is above the floor. The floor is 25000 dollars unless you pass another one.
 
@@ -33,13 +33,9 @@ The same domain on two feeds becomes one row. The row keeps the listing that has
 
 HumbleWorth returns three numbers. Auction is the 50th percentile. Marketplace is the 97.5th percentile, a direct marketplace sale. Brokerage is the 99.25th percentile. This tool compares marketplace to the floor. A name at the floor is not above it, so it is left out.
 
-The bulk API is the Replicate model `humbleworth/price-predict-v1`. Create a token at Replicate and export it:
+The default valuation runs HumbleWorth's published `price-predict-v1` weights on CPU. The weights are in the public image `r8.im/humbleworth/price-predict-v1`. The first run downloads that layer and caches it. No Replicate token is required.
 
-```bash
-export REPLICATE_API_TOKEN=r8_your_token_here
-```
-
-One request takes up to 2560 names. Replicate bills about $0.10 per 1000 predictions. `--max-values` defaults to 500, so a cold run is on the order of $0.05 if none of the names are cached. The cache lasts 14 days. The free page on humbleworth.com answers this network with a bot challenge, and the older valuation host does not complete TLS. The program does not try to get around either of those. The token is the supported call. Details are in [docs/SOURCES.md](docs/SOURCES.md).
+`HUMBLEWORTH_BACKEND=replicate` keeps the hosted model as an option. That path needs `REPLICATE_API_TOKEN`. One hosted request takes up to 2560 names and Replicate bills about $0.10 per 1000 predictions. `--max-values` defaults to 500. The estimate cache lasts 14 days. The free page on humbleworth.com answers this network with a bot challenge, and the older valuation host does not complete TLS. The program does not try to get around either of those. Details are in [docs/SOURCES.md](docs/SOURCES.md).
 
 ## Feeds
 
@@ -78,11 +74,11 @@ npx tsx src/cli.ts scan --listings examples/listings.json --values examples/valu
 
 `.github/workflows/daily.yml` runs at 15:45 UTC and when you start it by hand. GoDaddy refreshes the inventory files in the hour before that. The job uploads `results/` as an artifact. When the process exits 0 it commits the list and `web/results.json`.
 
-The job needs the `REPLICATE_API_TOKEN` secret. Without it the job exits 3, commits nothing, and the artifact holds the envelope so you can see which feeds answered.
+The job values names with the local model. A `REPLICATE_API_TOKEN` secret is optional, and it is used only when `HUMBLEWORTH_BACKEND` is `replicate`. If valuation fails the job exits 3, commits nothing, and the artifact holds the envelope so you can see which feeds answered.
 
 ## Page
 
-`web/` is a static page in the same black and white as the other Accomplish tools. The wordmark links to [accompli.sh](https://accompli.sh). The page reads `results.json` and draws the table. It does not send a bid.
+The page is [accompli.sh/premium-domains](https://accompli.sh/premium-domains). `web/` is that static page, in the same black and white as the other Accomplish tools. The wordmark on the page links to [accompli.sh](https://accompli.sh). The page reads `results.json` and draws the table. It does not send a bid. GitHub Pages is not used.
 
 ## Limits
 

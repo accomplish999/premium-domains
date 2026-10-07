@@ -108,7 +108,7 @@ test("fixture scan keeps only the name above the floor", async () => {
   assert.equal(second.result.newRows.length, 0);
 });
 
-test("a missing HumbleWorth credential is a loud failure and strict exits 3", async () => {
+test("replicate without a token is a loud HumbleWorth failure", async () => {
   const words = loadWords();
   const envelope = await scan({
     threshold: 25000,
@@ -126,7 +126,7 @@ test("a missing HumbleWorth credential is a loud failure and strict exits 3", as
     },
     now: new Date("2026-10-07T00:00:00.000Z"),
     words,
-    env: {},
+    env: { HUMBLEWORTH_BACKEND: "replicate" },
     listings,
     adapters: [],
   });

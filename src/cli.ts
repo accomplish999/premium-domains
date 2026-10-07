@@ -231,6 +231,9 @@ Flags
   --listings file.json   Skip the network and read listings from a file.
   --values file.json     Skip HumbleWorth and read estimates from a file.
 
+Valuation defaults to the published price-predict-v1 weights on CPU.
+Set HUMBLEWORTH_BACKEND=replicate and REPLICATE_API_TOKEN to use the hosted model.
+
 Exit 0 means the run finished. It does not mean a name is worth the estimate.
 A loud warning still comes with a body. --strict turns that warning into exit 3.
 `;

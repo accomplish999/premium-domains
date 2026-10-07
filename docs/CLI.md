@@ -30,6 +30,8 @@ Node 20 or newer.
 
 `PREMIUM_DOMAINS_THRESHOLD` and `PREMIUM_DOMAINS_MAX_VALUES` override those two defaults when the flag is absent.
 
+`HUMBLEWORTH_BACKEND` is `local` unless you set `replicate`. The local backend runs the published price-predict-v1 weights on CPU. The replicate backend needs `REPLICATE_API_TOKEN`. `PREMIUM_DOMAINS_MODEL_DIR` moves the weight cache. `PYTHON` selects the interpreter.
+
 ## sources
 
 Prints each adapter, whether it is on by default, and which environment variables it reads. `--json` wraps that list in the envelope with `tool` set to `sources`.
