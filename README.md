@@ -4,9 +4,9 @@
 
 Public feeds list far more names than clear a valuation floor. This tool reads those feeds, drops the names that would make the model call large, and keeps the names whose HumbleWorth marketplace estimate is above the floor. The floor is 25000 dollars unless you pass another one. Each run replaces today's file. Older runs stay on disk, so the distribution can be read again later.
 
-The scan in the committed `data/results.json` (`generatedAt` 2026-10-07T18:44:58.572Z) read 1,749,748 feed rows. It valued 13,431 names. 13 were above $25,000.
+The scan in the committed `data/results.json` (`generatedAt` 2026-10-07T20:25:29.732Z) read 3,740,996 feed rows. It valued 500,000 of the 515,692 names that passed the prefilter. 748 were above $25,000.
 
-The cheap pass is letters only. One letter and two letters pass on length. A longer label passes when it is in the word list, the length is inside the limit, and the TLD is `.com`, `.co`, `.io`, or `.ai`. That pass runs first so a large catalog does not all go to the model. park.io is the exception. Its public lists are upcoming drops, not a full aftermarket catalog, so every letter-only name on those lists is valued, for every TLD park.io publishes. Digits and hyphens stay out.
+The cheap pass is letters only. On `.com`, `.co`, `.io`, `.sh`, `.ly`, `.org`, `.net`, `.to`, `.gg`, `.ai`, `.me`, `.pro`, `.xyz`, and `.app`, a label of one to six letters passes on length. A longer label on those extensions passes when it is in the word list, when it is two dictionary words joined together, or when it is seven or eight letters that alternate consonant and vowel. A three-letter piece of a compound has to be a common English word. On any other TLD, one to four letters pass, and a longer label passes only when it is in the word list. Digits, hyphens, and extra dots stay out. `--tlds` can still limit the large feeds. park.io and Atom are curated lists, so every letter-only name on those lists is valued, up to 24 letters.
 
 This is a list. It is not a bid, and it is not an appraisal. An estimate is a model. Past sales do not set the next sale.
 
@@ -39,16 +39,17 @@ HumbleWorth returns three numbers. Auction is the 50th percentile. Marketplace i
 
 The default valuation runs HumbleWorth's published `price-predict-v1` weights on CPU. The weights are in the public image `r8.im/humbleworth/price-predict-v1`. The first run downloads that layer and caches it. No Replicate token is required.
 
-`HUMBLEWORTH_BACKEND=replicate` keeps the hosted model as an option. That path needs `REPLICATE_API_TOKEN`. One hosted request takes up to 2560 names and Replicate bills about $0.10 per 1000 predictions. `--max-values` defaults to 500. The estimate cache lasts 14 days. The free page on humbleworth.com answers this network with a bot challenge, and the older valuation host does not complete TLS. The program does not try to get around either of those. Details are in [docs/SOURCES.md](docs/SOURCES.md).
+`HUMBLEWORTH_BACKEND=replicate` keeps the hosted model as an option. That path needs `REPLICATE_API_TOKEN`. One hosted request takes up to 2560 names and Replicate bills about $0.10 per 1000 predictions. `--max-values` defaults to 500. The estimate cache lasts 7 days. The free page on humbleworth.com answers this network with a bot challenge, and the older valuation host does not complete TLS. The program does not try to get around either of those. Details are in [docs/SOURCES.md](docs/SOURCES.md).
 
 ## Feeds
 
 | Id          | What it reads                                             | Key                                                                  |
 | ----------- | --------------------------------------------------------- | -------------------------------------------------------------------- |
 | `parkio`    | Live auctions, per-TLD drop lists, and premium drop lists | none                                                                 |
-| `dynadot`   | Expired, user, and pre-expiry auction CSV                 | none                                                                 |
+| `dynadot`   | Expired, user, pre-expiry, and backorder CSV              | none                                                                 |
 | `godaddy`   | Inventory Protocol zip files                              | none                                                                 |
-| `sedo`      | Public auction and top-name text feeds                    | none                                                                 |
+| `sedo`      | Public auction file and locale top-name lists             | none                                                                 |
+| `atom`      | Public premium, .ai, aged, aftermarket, and expired pages | none                                                                 |
 | `namejet`   | Official download page                                    | none. The index lists CSV files. Those downloads returned HTTP 403.  |
 | `snapnames` | Official download page                                    | none, and the page was HTTP 403                                      |
 | `dropcatch` | Official auction CSV download                             | `DROPCATCH_CLIENT_ID`, `DROPCATCH_CLIENT_SECRET`                     |
@@ -76,7 +77,7 @@ npx tsx src/cli.ts scan --listings examples/listings.json --values examples/valu
 
 ## Daily run
 
-`.github/workflows/daily.yml` runs at 15:45 UTC and when you start it by hand. GoDaddy refreshes the inventory files in the hour before that. The job has `permissions: contents: write`. It caches the HumbleWorth weight layer, values every name that passed the prefilter (`--max-values 100000`), and uploads `results/` as an artifact.
+`.github/workflows/daily.yml` runs at 15:45 UTC and when you start it by hand. GoDaddy refreshes the inventory files in the hour before that. The job has `permissions: contents: write`. It caches the HumbleWorth weight layer and the valuation cache. A name valued in the last 7 days is not sent to the model again. The job values up to 550000 prefiltered names. `.com`, `.co`, `.io`, `.sh`, `.ly`, `.org`, `.net`, `.to`, `.gg`, `.ai`, `.me`, `.pro`, `.xyz`, and `.app` are valued first. It uploads `results/` as an artifact.
 
 When the process exits 0 and the file has a `generatedAt`, at least one valued name, and `stats.truncated` false, the job writes `data/results.json`, `web/results.json`, `data/history/YYYY-MM-DD.json`, `data/history/index.json`, and `data/archive.json`. It commits and pushes those paths only when the bytes changed. It does not delete history files. A failed valuation commits nothing. The artifact still holds the envelope so you can see which feeds answered.
 
@@ -138,7 +139,7 @@ The page is [accompli.sh/premium-domains](https://accompli.sh/premium-domains). 
 
 ## Limits
 
-The dictionary is an English word list, not a brand book. A rare word of eight letters can pass the prefilter and still be worth nothing. A coined name that is not in the list is dropped even when a person would want it. Two words glued together pass only when the whole label is itself in the list.
+The dictionary is an English word list, not a brand book. A rare word of eight letters can pass the prefilter and still be worth nothing. A coined name of seven or eight letters passes when the consonants and vowels alternate. Two words glued together pass when both parts are dictionary words. A label of up to six letters passes on the listed extensions even when it is not a word. Other TLDs pass at up to four letters, or when the label is a dictionary word. The daily job stops at 550000 names so it finishes inside the Actions time limit. The extensions above are valued before other TLDs.
 
 Prices stay in the feed's currency. The floor is always the HumbleWorth marketplace number, in dollars. A 20 EUR auction and an 83000 dollar estimate are different facts, and both are printed.
 

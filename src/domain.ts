@@ -17,6 +17,12 @@ export interface DomainParts {
   tld: string;
 }
 
+export function countTld(counts: Record<string, number>, domain: string): void {
+  const parts = splitDomain(domain);
+  const tld = parts?.tld ?? "other";
+  counts[tld] = (counts[tld] ?? 0) + 1;
+}
+
 export function splitDomain(raw: string): DomainParts | null {
   const domain = raw.trim().toLowerCase().replace(/\.$/, "");
   if (!domain || domain.includes("..")) return null;

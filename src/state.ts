@@ -56,5 +56,5 @@ export function writeCache(file: string, values: Map<string, CachedValuation>): 
       at: value.at,
     };
   }
-  writeFileSync(file, `${JSON.stringify({ entries }, null, 2)}\n`);
+  writeFileSync(file, `${JSON.stringify({ entries })}\n`);
 }

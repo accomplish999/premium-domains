@@ -1,4 +1,4 @@
-import { parseMoney, parseUnix, splitDomain } from "../domain";
+import { countTld, parseMoney, parseUnix, splitDomain } from "../domain";
 import { explainStatus, request } from "../http";
 import { keepDomain } from "../filter";
 import { cell, headerIndex, parseCsv } from "../text";
@@ -17,6 +17,10 @@ const FEEDS: Array<{ url: string; listingType: ListingType }> = [
   {
     url: "https://www.dynadot.com/market/pre-expiry-auction/pre_expiry_auctions.csv?currency=USD",
     listingType: "auction",
+  },
+  {
+    url: "https://www.dynadot.com/market/backorder/backorders.csv",
+    listingType: "drop",
   },
 ];
 
@@ -51,12 +55,13 @@ export function parseDynadotCsv(text: string, listingType: ListingType): { listi
 export const dynadot: SourceAdapter = {
   id: "dynadot",
   label: "Dynadot",
-  blurb: "Public aftermarket CSV for expired auctions, user auctions, and pre-expiry auctions.",
+  blurb: "Public CSV for expired auctions, user auctions, pre-expiry auctions, and backorders.",
   defaultEnabled: true,
   keyEnv: [],
   async load(ctx: SourceContext): Promise<SourceLoad> {
     const listings: Listing[] = [];
     const warnings: Warning[] = [];
+    const fetchedByTld: Record<string, number> = {};
     let fetched = 0;
     const failures: string[] = [];
     for (const feed of FEEDS) {
@@ -70,6 +75,7 @@ export const dynadot: SourceAdapter = {
       const parsed = parseDynadotCsv(response.text, feed.listingType);
       fetched += parsed.fetched;
       for (const listing of parsed.listings) {
+        countTld(fetchedByTld, listing.domain);
         if (splitDomain(listing.domain) && keepDomain(listing.domain, ctx.filter)) listings.push(listing);
       }
     }
@@ -83,6 +89,6 @@ export const dynadot: SourceAdapter = {
         message: `${failures.length} Dynadot file(s) were not CSV. ${failures[0]}`,
       });
     }
-    return { listings, fetched, warnings, skipped: false };
+    return { listings, fetched, warnings, skipped: false, fetchedByTld };
   },
 };

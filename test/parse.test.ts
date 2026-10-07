@@ -2,9 +2,10 @@ import assert from "node:assert/strict";
 import { deflateRawSync } from "node:zlib";
 import { test } from "node:test";
 import { parseEuropeanThousands, parseMoney, parseParkStamp } from "../src/domain";
+import { atomTotalPages, parseAtomListings } from "../src/sources/atom";
 import { parseDynadotCsv } from "../src/sources/dynadot";
 import { parseGodaddyJson } from "../src/sources/godaddy";
-import { parseParkAuctions, parseParkDomains, parkTldsFromHtml } from "../src/sources/parkio";
+import { parseParkAuctions, parseParkDomains, parkPageMatchesTld, parkTldsFromHtml } from "../src/sources/parkio";
 import { parseSedoAuctions, parseSedoTop } from "../src/sources/sedo";
 import { fileLinks, parseInventory } from "../src/sources/download-index";
 import { unzipFirst } from "../src/text";
@@ -135,4 +136,25 @@ test("dedupe keeps one row and records the other source", () => {
   assert.equal(rows.length, 1);
   assert.equal(rows[0]?.source, "dynadot");
   assert.deepEqual(rows[0]?.alsoSeenOn, ["sedo"]);
+});
+
+test("park.io ignores a file that repeats another TLD", () => {
+  assert.equal(parkPageMatchesTld(["10000nfts.io", "1696.io"], "xyz"), false);
+  assert.equal(parkPageMatchesTld(["crew.ly", "pharmacy.ly"], "ly"), true);
+  assert.equal(parkPageMatchesTld([], "ai"), true);
+});
+
+test("atom html keeps the domain and the asking price", () => {
+  const html = `
+    <a href="/name/Mind.ai" class="domain-name font-semibold">Mind.ai</a>
+    <span class="domain-price font-bold">$12,500</span>
+    totalPages: 100,
+  `;
+  assert.equal(atomTotalPages(html), 100);
+  const parsed = parseAtomListings(html, "buynow");
+  assert.equal(parsed.fetched, 1);
+  assert.equal(parsed.listings[0]?.domain, "mind.ai");
+  assert.equal(parsed.listings[0]?.price, 12500);
+  assert.equal(parsed.listings[0]?.link, "https://www.atom.com/name/Mind.ai");
+  assert.equal(parsed.listings[0]?.listingType, "buynow");
 });

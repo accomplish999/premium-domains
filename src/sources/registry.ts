@@ -1,5 +1,6 @@
 import { InputError } from "../errors";
 import { afternic } from "./afternic";
+import { atom } from "./atom";
 import { dropcatch } from "./dropcatch";
 import { dynadot } from "./dynadot";
 import { godaddy } from "./godaddy";
@@ -9,7 +10,7 @@ import { sedo } from "./sedo";
 import { snapnames } from "./snapnames";
 import type { SourceAdapter } from "./types";
 
-export const SOURCES: SourceAdapter[] = [parkio, dynadot, godaddy, sedo, namejet, snapnames, dropcatch, afternic];
+export const SOURCES: SourceAdapter[] = [parkio, dynadot, godaddy, sedo, atom, namejet, snapnames, dropcatch, afternic];
 
 export function sourceById(id: string): SourceAdapter | undefined {
   return SOURCES.find((source) => source.id === id);

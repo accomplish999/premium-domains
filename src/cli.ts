@@ -78,16 +78,17 @@ function buildOptions(flags: Flags, env: NodeJS.ProcessEnv): ScanOptions {
     throw new InputError("BAD_THRESHOLD", "Threshold must be a non-negative number of dollars.");
   }
   const minLength = integerFlag(flags, "min-length", "1");
-  const maxLength = integerFlag(flags, "max-length", "10");
+  const maxLength = integerFlag(flags, "max-length", "16");
   const maxValues = integerFlag(flags, "max-values", env.PREMIUM_DOMAINS_MAX_VALUES ?? "500");
   if (minLength < 1 || maxLength < minLength)
     throw new InputError("BAD_LENGTH", "Check --min-length and --max-length.");
   if (maxValues < 1) throw new InputError("BAD_MAX", "--max-values must be at least 1.");
-  const tlds = (flag(flags, "tlds") ?? "com,co,io,ai")
+  const tldFlag = flag(flags, "tlds");
+  const tlds = (tldFlag ?? "")
     .split(",")
     .map((tld) => tld.trim().toLowerCase().replace(/^\./, ""))
     .filter(Boolean);
-  if (tlds.length === 0) throw new InputError("BAD_TLDS", "Pass at least one TLD.");
+  if (tldFlag !== undefined && tlds.length === 0) throw new InputError("BAD_TLDS", "Pass at least one TLD.");
   const sourcesRaw = flag(flags, "sources");
   const listingsPath = flag(flags, "listings");
   const valuesPath = flag(flags, "values");
@@ -107,7 +108,7 @@ function buildOptions(flags: Flags, env: NodeJS.ProcessEnv): ScanOptions {
     outDir,
     statePath: flag(flags, "state") ?? "results/state.json",
     cachePath: flag(flags, "cache") ?? "results/cache.json",
-    cacheDays: integerFlag(flags, "cache-days", "14"),
+    cacheDays: integerFlag(flags, "cache-days", "7"),
     fetch: globalThis.fetch,
     now: new Date(),
     words: loadWords(),
@@ -218,15 +219,15 @@ Flags
   --json                 Print the envelope. Read ok, then warnings, then result.
   --strict               Exit 3 when a loud warning is present. The body is still printed.
   --threshold 25000      Marketplace dollars. A name is kept only when the estimate is above this.
-  --tlds com,co,io,ai    Labels after the dot.
+  --tlds com,net,org    Optional. Omit it to keep every TLD. park.io and Atom ignore this list.
   --min-length 1         Count letters in the label.
-  --max-length 10
-  --max-values 500       How many prefiltered names to send for valuation. Shortest, then .com.
+  --max-length 16        Upper bound for every kept label.
+  --max-values 500       How many prefiltered names to send for valuation. Short labels first, on every TLD.
   --sources a,b          Replace the default source set.
   --out results          Write latest.json, latest.csv, and new.csv.
   --state results/state.json
   --cache results/cache.json
-  --cache-days 14
+  --cache-days 7
   --new                  Text output shows only names absent from the previous above-threshold set.
   --listings file.json   Skip the network and read listings from a file.
   --values file.json     Skip HumbleWorth and read estimates from a file.

@@ -15,7 +15,7 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -35,10 +35,17 @@ jobs:
         with:
           path: ~/.cache/premium-domains/humbleworth-price-predict-v1
           key: humbleworth-price-predict-v1-a925db84-4d8953c6
+      - name: cache valuations from the last 7 days
+        uses: actions/cache@v4
+        with:
+          path: results/cache.json
+          key: valuation-cache-${{ github.run_id }}
+          restore-keys: |
+            valuation-cache-
       - name: warm the valuation model
         run: python3 model/humbleworth/value.py --warm
       - name: scan
-        run: npx tsx src/cli.ts scan --json --max-values 100000 --out results --state results/state.json --cache results/cache.json
+        run: npx tsx src/cli.ts scan --json --max-values 550000 --cache-days 7 --out results --state results/state.json --cache results/cache.json
         env:
           REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
           DROPCATCH_CLIENT_ID: ${{ secrets.DROPCATCH_CLIENT_ID }}

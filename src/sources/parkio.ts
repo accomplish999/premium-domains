@@ -1,4 +1,4 @@
-import { dateOnly, parseMoney, parseParkStamp, splitDomain } from "../domain";
+import { countTld, dateOnly, parseMoney, parseParkStamp, splitDomain } from "../domain";
 import { delay, explainStatus, request } from "../http";
 import { keepParkDomain } from "../filter";
 import type { Listing, Warning } from "../types";
@@ -106,13 +106,25 @@ export function parseParkDomains(body: ParkPage): { listings: Listing[]; fetched
   return { listings, fetched: domains.length };
 }
 
+/** park.io answers an unknown TLD with the .io file. Those rows are not that TLD. */
+export function parkPageMatchesTld(names: string[], tld: string): boolean {
+  for (const name of names) {
+    const parts = splitDomain(name);
+    if (!parts) continue;
+    if (parts.tld !== tld) return false;
+  }
+  return true;
+}
+
 async function loadPages(
   firstUrl: string,
   pageUrl: (page: number) => string,
   ctx: SourceContext,
   take: (body: ParkPage) => { listings: Listing[]; fetched: number },
-): Promise<{ listings: Listing[]; fetched: number }> {
+  expectedTld?: string,
+): Promise<{ listings: Listing[]; fetched: number; fetchedByTld: Record<string, number> }> {
   const listings: Listing[] = [];
+  const fetchedByTld: Record<string, number> = {};
   let fetched = 0;
   let url = firstUrl;
   for (let page = 1; page <= MAX_PAGES; page++) {
@@ -123,8 +135,18 @@ async function loadPages(
     const body = JSON.parse(response.text) as ParkPage;
     if (body.success === false) throw new Error("park.io returned success false.");
     const parsed = take(body);
+    if (
+      expectedTld &&
+      !parkPageMatchesTld(
+        parsed.listings.map((listing) => listing.domain),
+        expectedTld,
+      )
+    ) {
+      return { listings: [], fetched: 0, fetchedByTld: {} };
+    }
     fetched += parsed.fetched;
     for (const listing of parsed.listings) {
+      countTld(fetchedByTld, listing.domain);
       if (keepParkDomain(listing.domain) && splitDomain(listing.domain)) listings.push(listing);
     }
     const pageCount = body.pageCount ?? page;
@@ -134,7 +156,7 @@ async function loadPages(
     await delay(PAUSE_MS);
     url = pageUrl(next);
   }
-  return { listings, fetched };
+  return { listings, fetched, fetchedByTld };
 }
 
 async function tldsFor(
@@ -162,13 +184,14 @@ async function loadQuiet(
   take: (body: ParkPage) => { listings: Listing[]; fetched: number },
   warnings: Warning[],
   label: string,
-): Promise<{ listings: Listing[]; fetched: number }> {
+  expectedTld?: string,
+): Promise<{ listings: Listing[]; fetched: number; fetchedByTld: Record<string, number> }> {
   try {
-    return await loadPages(firstUrl, pageUrl, ctx, take);
+    return await loadPages(firstUrl, pageUrl, ctx, take, expectedTld);
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
     warnings.push({ code: "PARKIO_PARTIAL", severity: "note", message: `${label}: ${message}` });
-    return { listings: [], fetched: 0 };
+    return { listings: [], fetched: 0, fetchedByTld: {} };
   }
 }
 
@@ -182,7 +205,15 @@ export const parkio: SourceAdapter = {
   async load(ctx: SourceContext): Promise<SourceLoad> {
     const warnings: Warning[] = [];
     const listings: Listing[] = [];
+    const fetchedByTld: Record<string, number> = {};
     let fetched = 0;
+    const absorb = (part: { listings: Listing[]; fetched: number; fetchedByTld: Record<string, number> }) => {
+      for (const listing of part.listings) listings.push(listing);
+      fetched += part.fetched;
+      for (const [tld, count] of Object.entries(part.fetchedByTld)) {
+        fetchedByTld[tld] = (fetchedByTld[tld] ?? 0) + count;
+      }
+    };
     const auctions = await loadQuiet(
       AUCTIONS,
       (page) => `https://park.io/auctions/index/page:${page}.json`,
@@ -191,8 +222,7 @@ export const parkio: SourceAdapter = {
       warnings,
       "auctions",
     );
-    listings.push(...auctions.listings);
-    fetched += auctions.fetched;
+    absorb(auctions);
 
     const dropTlds = await tldsFor("https://park.io/domains", "domains", DROP_FALLBACK, ctx);
     for (const tld of dropTlds) {
@@ -204,9 +234,9 @@ export const parkio: SourceAdapter = {
         (body) => parseParkDomains(body),
         warnings,
         `drops ${tld}`,
+        tld,
       );
-      listings.push(...dropping.listings);
-      fetched += dropping.fetched;
+      absorb(dropping);
     }
 
     const premiumTlds = await tldsFor("https://park.io/premium-domains", "premium-domains", DROP_FALLBACK, ctx);
@@ -219,14 +249,14 @@ export const parkio: SourceAdapter = {
         (body) => parseParkDomains(body),
         warnings,
         `premium drops ${tld}`,
+        tld,
       );
-      listings.push(...premium.listings);
-      fetched += premium.fetched;
+      absorb(premium);
     }
 
     if (fetched === 0) {
       throw new Error(warnings[0]?.message ?? "park.io returned no listings.");
     }
-    return { listings, fetched, warnings, skipped: false };
+    return { listings, fetched, warnings, skipped: false, fetchedByTld };
   },
 };

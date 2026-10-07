@@ -2,7 +2,7 @@ import { spawn } from "node:child_process";
 import { existsSync } from "node:fs";
 import path from "node:path";
 
-const LOCAL_TIMEOUT_MS = 70 * 60 * 1000;
+const LOCAL_TIMEOUT_MS = 80 * 60 * 1000;
 
 export function localModelScript(): string | null {
   const candidates = [

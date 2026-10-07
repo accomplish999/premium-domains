@@ -14,6 +14,7 @@ export interface SourceLoad {
   fetched: number;
   warnings: Warning[];
   skipped: boolean;
+  fetchedByTld?: Record<string, number>;
 }
 
 export interface SourceAdapter {

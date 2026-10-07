@@ -1,4 +1,4 @@
-import { parseMoney, splitDomain } from "../domain";
+import { countTld, parseMoney, splitDomain } from "../domain";
 import { explainStatus, request } from "../http";
 import { keepDomain } from "../filter";
 import { cell, headerIndex, jsonObjects, parseCsv, unzipFirst } from "../text";
@@ -101,6 +101,7 @@ export const godaddy: SourceAdapter = {
   async load(ctx: SourceContext): Promise<SourceLoad> {
     const listings: Listing[] = [];
     const warnings: Warning[] = [];
+    const fetchedByTld: Record<string, number> = {};
     let fetched = 0;
     const failures: string[] = [];
     for (const url of FILES) {
@@ -115,6 +116,7 @@ export const godaddy: SourceAdapter = {
         decoded.kind === "json" ? parseGodaddyJson(decoded.text, fallback) : parseGodaddyCsv(decoded.text, fallback);
       fetched += parsed.fetched;
       for (const listing of parsed.listings) {
+        countTld(fetchedByTld, listing.domain);
         if (splitDomain(listing.domain) && keepDomain(listing.domain, ctx.filter)) listings.push(listing);
       }
     }
@@ -128,6 +130,6 @@ export const godaddy: SourceAdapter = {
         message: failures[0] ?? "A GoDaddy inventory file failed.",
       });
     }
-    return { listings, fetched, warnings, skipped: false };
+    return { listings, fetched, warnings, skipped: false, fetchedByTld };
   },
 };

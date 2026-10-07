@@ -6,7 +6,7 @@
 
 `words.txt` is the dictionary the prefilter consults. It is the [dwyl/english-words](https://github.com/dwyl/english-words) `words_alpha.txt` list, cut to letters `a-z` and length 3 through 12. That repository describes its lists as public domain.
 
-`common.txt` is the [first20hours/google-10000-english](https://github.com/first20hours/google-10000-english) US no-swear list, cut the same way. It is a public-domain frequency list. It does not decide whether a name passes. It decides which names are valued first when `--max-values` is smaller than the prefilter.
+`common.txt` is the [first20hours/google-10000-english](https://github.com/first20hours/google-10000-english) US no-swear list, cut the same way. It is a public-domain frequency list. A two-word compound whose parts are three letters long has to be in this list. It also decides which names are valued first when `--max-values` is smaller than the prefilter.
 
 `extra.txt` is an optional list of extra spellings. It is empty.
 

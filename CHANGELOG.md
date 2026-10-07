@@ -13,3 +13,5 @@ The page is https://accompli.sh/premium-domains. GitHub Pages is not used.
 The published list is `data/results.json` (the same bytes as `web/results.json`). The daily job values every prefiltered name with the local model, caches the weights, and pushes that file when it changed.
 
 park.io now reads every published drop TLD and every premium drop page, and values letter-only names from those lists. `data/history/` keeps each day's file. `data/archive.json` keeps every domain that has cleared the floor.
+
+The prefilter keeps short letter-only labels, dictionary words, two-word compounds, and alternating 7 and 8 letter patterns on every TLD. Atom's public premium and `.ai` pages are a source. Valuation estimates are cached for 7 days.
