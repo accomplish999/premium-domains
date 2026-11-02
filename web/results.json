@@ -1,7 +1,20 @@
 {
-  "generatedAt": "2026-11-01T19:54:38.217Z",
+  "generatedAt": "2026-11-02T23:13:22.473Z",
   "threshold": 25000,
   "rows": [
+    {
+      "domain": "vv.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=vv.com",
+      "listingType": "buynow",
+      "marketplace": 12437416,
+      "auctionValue": 1679296,
+      "brokerage": 18255595,
+      "alsoSeenOn": []
+    },
     {
       "domain": "ticket.com",
       "source": "atom",
@@ -13,19 +26,6 @@
       "marketplace": 10037078,
       "auctionValue": 1209117,
       "brokerage": 17013650,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "give.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=give.com",
-      "listingType": "buynow",
-      "marketplace": 6909857,
-      "auctionValue": 857321,
-      "brokerage": 13856178,
       "alsoSeenOn": []
     },
     {
@@ -52,19 +52,6 @@
       "marketplace": 3395233,
       "auctionValue": 472432,
       "brokerage": 5931874,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "sh.com",
-      "source": "sedo",
-      "price": 6500000,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=sh.com",
-      "listingType": "buynow",
-      "marketplace": 3327517,
-      "auctionValue": 417885,
-      "brokerage": 5635574,
       "alsoSeenOn": []
     },
     {
@@ -159,6 +146,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "picture.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=picture.com",
+      "listingType": "buynow",
+      "marketplace": 2368249,
+      "auctionValue": 286308,
+      "brokerage": 3812005,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "coral.com",
       "source": "atom",
       "price": 2750000,
@@ -169,19 +169,6 @@
       "marketplace": 2310337,
       "auctionValue": 251430,
       "brokerage": 3720467,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "hemp.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=hemp.com",
-      "listingType": "buynow",
-      "marketplace": 2146664,
-      "auctionValue": 232175,
-      "brokerage": 3435745,
       "alsoSeenOn": []
     },
     {
@@ -244,9 +231,9 @@
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Lisa.com",
       "listingType": "buynow",
-      "marketplace": 1578984,
+      "marketplace": 1578985,
       "auctionValue": 149668,
-      "brokerage": 2595785,
+      "brokerage": 2595787,
       "alsoSeenOn": []
     },
     {
@@ -335,9 +322,9 @@
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Set.com",
       "listingType": "buynow",
-      "marketplace": 1375756,
+      "marketplace": 1375755,
       "auctionValue": 141324,
-      "brokerage": 2261943,
+      "brokerage": 2261942,
       "alsoSeenOn": []
     },
     {
@@ -351,19 +338,6 @@
       "marketplace": 1338855,
       "auctionValue": 120103,
       "brokerage": 2267196,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "drivers.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=drivers.com",
-      "listingType": "buynow",
-      "marketplace": 1309778,
-      "auctionValue": 120211,
-      "brokerage": 2211068,
       "alsoSeenOn": []
     },
     {
@@ -439,9 +413,9 @@
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Rus.com",
       "listingType": "buynow",
-      "marketplace": 1068680,
+      "marketplace": 1068681,
       "auctionValue": 97506,
-      "brokerage": 1859830,
+      "brokerage": 1859831,
       "alsoSeenOn": []
     },
     {
@@ -507,45 +481,6 @@
       "marketplace": 929632,
       "auctionValue": 89202,
       "brokerage": 1629374,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "craig.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=craig.com",
-      "listingType": "buynow",
-      "marketplace": 919840,
-      "auctionValue": 85578,
-      "brokerage": 1632081,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "petition.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=petition.com",
-      "listingType": "buynow",
-      "marketplace": 917789,
-      "auctionValue": 81031,
-      "brokerage": 1654211,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "earthquake.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=earthquake.com",
-      "listingType": "buynow",
-      "marketplace": 912922,
-      "auctionValue": 76830,
-      "brokerage": 1658573,
       "alsoSeenOn": []
     },
     {
@@ -621,9 +556,9 @@
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Recommendations.com",
       "listingType": "buynow",
-      "marketplace": 781683,
-      "auctionValue": 64431,
-      "brokerage": 1496830,
+      "marketplace": 781684,
+      "auctionValue": 64432,
+      "brokerage": 1496831,
       "alsoSeenOn": []
     },
     {
@@ -637,6 +572,19 @@
       "marketplace": 773850,
       "auctionValue": 77890,
       "brokerage": 1385192,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "sample.com",
+      "source": "atom",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Sample.com",
+      "listingType": "buynow",
+      "marketplace": 763045,
+      "auctionValue": 68298,
+      "brokerage": 1421897,
       "alsoSeenOn": []
     },
     {
@@ -705,6 +653,32 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "unions.com",
+      "source": "sedo",
+      "price": 300000,
+      "currency": "EUR",
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=unions.com",
+      "listingType": "buynow",
+      "marketplace": 691812,
+      "auctionValue": 59847,
+      "brokerage": 1339923,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "organ.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=organ.com",
+      "listingType": "buynow",
+      "marketplace": 688838,
+      "auctionValue": 60803,
+      "brokerage": 1324636,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "ranger.com",
       "source": "atom",
       "price": 750000,
@@ -725,9 +699,9 @@
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Finger.com",
       "listingType": "buynow",
-      "marketplace": 639677,
+      "marketplace": 639676,
       "auctionValue": 61279,
-      "brokerage": 1214610,
+      "brokerage": 1214609,
       "alsoSeenOn": []
     },
     {
@@ -754,19 +728,6 @@
       "marketplace": 606726,
       "auctionValue": 59217,
       "brokerage": 1159674,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "faithful.com",
-      "source": "atom",
-      "price": 725000,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://www.atom.com/name/Faithful.com",
-      "listingType": "buynow",
-      "marketplace": 591675,
-      "auctionValue": 54341,
-      "brokerage": 1163790,
       "alsoSeenOn": []
     },
     {
@@ -887,16 +848,16 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "peanut.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
+      "domain": "isabella.com",
+      "source": "atom",
+      "price": 207548,
+      "currency": "USD",
       "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=peanut.com",
+      "link": "https://www.atom.com/name/Isabella.com",
       "listingType": "buynow",
-      "marketplace": 496374,
-      "auctionValue": 44467,
-      "brokerage": 1016501,
+      "marketplace": 456389,
+      "auctionValue": 35702,
+      "brokerage": 1019171,
       "alsoSeenOn": []
     },
     {
@@ -923,19 +884,6 @@
       "marketplace": 454790,
       "auctionValue": 42304,
       "brokerage": 952012,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "shopping.at",
-      "source": "sedo",
-      "price": 150000,
-      "currency": "EUR",
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=shopping.at",
-      "listingType": "buynow",
-      "marketplace": 443280,
-      "auctionValue": 36884,
-      "brokerage": 909463,
       "alsoSeenOn": []
     },
     {
@@ -1004,6 +952,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "athletic.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=athletic.com",
+      "listingType": "buynow",
+      "marketplace": 415979,
+      "auctionValue": 41671,
+      "brokerage": 859243,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "gross.com",
       "source": "atom",
       "price": 4995000,
@@ -1017,6 +978,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "amo.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=amo.com",
+      "listingType": "buynow",
+      "marketplace": 402586,
+      "auctionValue": 44005,
+      "brokerage": 812080,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "bout.com",
       "source": "atom",
       "price": 1495000,
@@ -1027,19 +1001,6 @@
       "marketplace": 399300,
       "auctionValue": 39188,
       "brokerage": 834376,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "blacklist.com",
-      "source": "sedo",
-      "price": 600000,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=blacklist.com",
-      "listingType": "buynow",
-      "marketplace": 395473,
-      "auctionValue": 23041,
-      "brokerage": 866570,
       "alsoSeenOn": []
     },
     {
@@ -1076,9 +1037,9 @@
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Series.com",
       "listingType": "buynow",
-      "marketplace": 388947,
+      "marketplace": 388948,
       "auctionValue": 28210,
-      "brokerage": 828438,
+      "brokerage": 828439,
       "alsoSeenOn": []
     },
     {
@@ -1169,7 +1130,7 @@
       "listingType": "buynow",
       "marketplace": 369108,
       "auctionValue": 36928,
-      "brokerage": 768484,
+      "brokerage": 768483,
       "alsoSeenOn": []
     },
     {
@@ -1277,6 +1238,32 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "rpx.com",
+      "source": "atom",
+      "price": 750000,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/RPX.com",
+      "listingType": "buynow",
+      "marketplace": 329907,
+      "auctionValue": 38927,
+      "brokerage": 672862,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "legalaid.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=legalaid.com",
+      "listingType": "buynow",
+      "marketplace": 327832,
+      "auctionValue": 15382,
+      "brokerage": 772776,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "snatch.com",
       "source": "atom",
       "price": 1495000,
@@ -1316,16 +1303,29 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "gothic.com",
+      "domain": "schooling.com",
       "source": "sedo",
       "price": null,
       "currency": null,
       "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=gothic.com",
+      "link": "https://sedo.com/search/details/?domain=schooling.com",
       "listingType": "buynow",
-      "marketplace": 312189,
-      "auctionValue": 31655,
-      "brokerage": 660192,
+      "marketplace": 312840,
+      "auctionValue": 30393,
+      "brokerage": 661586,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "shovel.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=shovel.com",
+      "listingType": "buynow",
+      "marketplace": 311438,
+      "auctionValue": 31014,
+      "brokerage": 660161,
       "alsoSeenOn": []
     },
     {
@@ -1420,16 +1420,29 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "animator.com",
+      "domain": "everyday.com",
       "source": "sedo",
       "price": null,
       "currency": null,
       "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=animator.com",
+      "link": "https://sedo.com/search/details/?domain=everyday.com",
       "listingType": "buynow",
-      "marketplace": 272870,
-      "auctionValue": 28615,
-      "brokerage": 574304,
+      "marketplace": 275663,
+      "auctionValue": 27009,
+      "brokerage": 571104,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "acceleration.com",
+      "source": "atom",
+      "price": 995000,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Acceleration.com",
+      "listingType": "buynow",
+      "marketplace": 270913,
+      "auctionValue": 27866,
+      "brokerage": 565583,
       "alsoSeenOn": []
     },
     {
@@ -1446,19 +1459,6 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "grind.com",
-      "source": "sedo",
-      "price": 3500000,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=grind.com",
-      "listingType": "buynow",
-      "marketplace": 267062,
-      "auctionValue": 28855,
-      "brokerage": 560608,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "ile.com",
       "source": "atom",
       "price": 478000,
@@ -1469,6 +1469,19 @@
       "marketplace": 265832,
       "auctionValue": 28907,
       "brokerage": 553075,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "stampede.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=stampede.com",
+      "listingType": "buynow",
+      "marketplace": 265739,
+      "auctionValue": 27826,
+      "brokerage": 554333,
       "alsoSeenOn": []
     },
     {
@@ -1524,16 +1537,16 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "hpc.com",
+      "domain": "vines.com",
       "source": "sedo",
       "price": null,
       "currency": null,
       "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=hpc.com",
+      "link": "https://sedo.com/search/details/?domain=vines.com",
       "listingType": "buynow",
-      "marketplace": 248283,
-      "auctionValue": 31427,
-      "brokerage": 507293,
+      "marketplace": 247831,
+      "auctionValue": 27014,
+      "brokerage": 519266,
       "alsoSeenOn": []
     },
     {
@@ -1680,22 +1693,9 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "ftl.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=ftl.com",
-      "listingType": "buynow",
-      "marketplace": 234327,
-      "auctionValue": 30016,
-      "brokerage": 478966,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "lotto.club",
       "source": "godaddy",
-      "price": 11,
+      "price": 38,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://auctions.godaddy.com/",
@@ -1927,19 +1927,6 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "anger.com",
-      "source": "sedo",
-      "price": 250000,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=anger.com",
-      "listingType": "buynow",
-      "marketplace": 208869,
-      "auctionValue": 22580,
-      "brokerage": 429584,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "eighty.com",
       "source": "atom",
       "price": 269000,
@@ -1966,6 +1953,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "webcasino.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=webcasino.com",
+      "listingType": "buynow",
+      "marketplace": 207798,
+      "auctionValue": 14185,
+      "brokerage": 455156,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "diana.com",
       "source": "atom",
       "price": 875000,
@@ -1976,6 +1976,19 @@
       "marketplace": 207652,
       "auctionValue": 24581,
       "brokerage": 431093,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "signing.com",
+      "source": "atom",
+      "price": 160000,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Signing.com",
+      "listingType": "buynow",
+      "marketplace": 206810,
+      "auctionValue": 22030,
+      "brokerage": 423838,
       "alsoSeenOn": []
     },
     {
@@ -2015,6 +2028,19 @@
       "marketplace": 202750,
       "auctionValue": 26844,
       "brokerage": 410628,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "hfd.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=hfd.com",
+      "listingType": "buynow",
+      "marketplace": 202667,
+      "auctionValue": 27381,
+      "brokerage": 406848,
       "alsoSeenOn": []
     },
     {
@@ -2093,6 +2119,19 @@
       "marketplace": 195127,
       "auctionValue": 12361,
       "brokerage": 420111,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "tactic.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=tactic.com",
+      "listingType": "buynow",
+      "marketplace": 193846,
+      "auctionValue": 21700,
+      "brokerage": 393340,
       "alsoSeenOn": []
     },
     {
@@ -2187,6 +2226,32 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "compliment.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=compliment.com",
+      "listingType": "buynow",
+      "marketplace": 188584,
+      "auctionValue": 21229,
+      "brokerage": 381413,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "nib.com",
+      "source": "atom",
+      "price": 750000,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/NIB.com",
+      "listingType": "buynow",
+      "marketplace": 187397,
+      "auctionValue": 25483,
+      "brokerage": 372491,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "sul.com",
       "source": "atom",
       "price": 98000,
@@ -2265,19 +2330,6 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "kou.com",
-      "source": "sedo",
-      "price": 2500000,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=kou.com",
-      "listingType": "buynow",
-      "marketplace": 178084,
-      "auctionValue": 24003,
-      "brokerage": 354554,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "detection.com",
       "source": "atom",
       "price": 2495000,
@@ -2327,19 +2379,6 @@
       "marketplace": 174325,
       "auctionValue": 20173,
       "brokerage": 351007,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "relaxation.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=relaxation.com",
-      "listingType": "buynow",
-      "marketplace": 171951,
-      "auctionValue": 19165,
-      "brokerage": 350442,
       "alsoSeenOn": []
     },
     {
@@ -2586,7 +2625,7 @@
       "listingType": "buynow",
       "marketplace": 160355,
       "auctionValue": 16567,
-      "brokerage": 319022,
+      "brokerage": 319023,
       "alsoSeenOn": []
     },
     {
@@ -2655,6 +2694,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "plugin.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=plugin.com",
+      "listingType": "buynow",
+      "marketplace": 157356,
+      "auctionValue": 12483,
+      "brokerage": 332405,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "samaritans.com",
       "source": "atom",
       "price": 60999,
@@ -2681,19 +2733,6 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "cjs.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=cjs.com",
-      "listingType": "buynow",
-      "marketplace": 154678,
-      "auctionValue": 21640,
-      "brokerage": 300023,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "corrosion.com",
       "source": "atom",
       "price": 250000,
@@ -2716,7 +2755,20 @@
       "listingType": "buynow",
       "marketplace": 154141,
       "auctionValue": 17325,
-      "brokerage": 304444,
+      "brokerage": 304443,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "boil.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=boil.com",
+      "listingType": "buynow",
+      "marketplace": 153786,
+      "auctionValue": 17560,
+      "brokerage": 305029,
       "alsoSeenOn": []
     },
     {
@@ -2772,6 +2824,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "species.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=species.com",
+      "listingType": "buynow",
+      "marketplace": 151209,
+      "auctionValue": 17430,
+      "brokerage": 297755,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "tame.com",
       "source": "atom",
       "price": 1250000,
@@ -2807,7 +2872,7 @@
       "listingType": "buynow",
       "marketplace": 148547,
       "auctionValue": 7342,
-      "brokerage": 374875,
+      "brokerage": 374876,
       "alsoSeenOn": []
     },
     {
@@ -2821,6 +2886,19 @@
       "marketplace": 148402,
       "auctionValue": 21164,
       "brokerage": 285556,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "livestreaming.com",
+      "source": "sedo",
+      "price": 2300000,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=livestreaming.com",
+      "listingType": "buynow",
+      "marketplace": 148270,
+      "auctionValue": 9015,
+      "brokerage": 329569,
       "alsoSeenOn": []
     },
     {
@@ -2839,7 +2917,7 @@
     {
       "domain": "deh.com",
       "source": "atom",
-      "price": 383750,
+      "price": 383500,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Deh.com",
@@ -2889,6 +2967,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "manipulate.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=manipulate.com",
+      "listingType": "buynow",
+      "marketplace": 145036,
+      "auctionValue": 17629,
+      "brokerage": 282645,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "thriving.com",
       "source": "atom",
       "price": 750000,
@@ -2917,7 +3008,7 @@
     {
       "domain": "xcm.com",
       "source": "atom",
-      "price": 234999,
+      "price": 234599,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Xcm.com",
@@ -2925,6 +3016,19 @@
       "marketplace": 141842,
       "auctionValue": 19607,
       "brokerage": 271984,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "emir.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=emir.com",
+      "listingType": "buynow",
+      "marketplace": 141804,
+      "auctionValue": 16542,
+      "brokerage": 276392,
       "alsoSeenOn": []
     },
     {
@@ -3029,6 +3133,19 @@
       "marketplace": 139230,
       "auctionValue": 19961,
       "brokerage": 264345,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "theology.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=theology.com",
+      "listingType": "buynow",
+      "marketplace": 139174,
+      "auctionValue": 15951,
+      "brokerage": 272641,
       "alsoSeenOn": []
     },
     {
@@ -3138,7 +3255,7 @@
     {
       "domain": "utd.com",
       "source": "atom",
-      "price": 1588888,
+      "price": 1499999,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/UTD.com",
@@ -3172,6 +3289,19 @@
       "marketplace": 133753,
       "auctionValue": 7137,
       "brokerage": 320075,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "uit.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=uit.com",
+      "listingType": "buynow",
+      "marketplace": 133307,
+      "auctionValue": 19375,
+      "brokerage": 251562,
       "alsoSeenOn": []
     },
     {
@@ -3211,19 +3341,6 @@
       "marketplace": 132717,
       "auctionValue": 9655,
       "brokerage": 279311,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "delegation.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=delegation.com",
-      "listingType": "buynow",
-      "marketplace": 132698,
-      "auctionValue": 15374,
-      "brokerage": 257717,
       "alsoSeenOn": []
     },
     {
@@ -3328,6 +3445,19 @@
       "marketplace": 128454,
       "auctionValue": 15791,
       "brokerage": 244961,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "kdt.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=kdt.com",
+      "listingType": "buynow",
+      "marketplace": 127401,
+      "auctionValue": 16757,
+      "brokerage": 242119,
       "alsoSeenOn": []
     },
     {
@@ -3444,7 +3574,7 @@
       "listingType": "buynow",
       "marketplace": 122445,
       "auctionValue": 6393,
-      "brokerage": 309109,
+      "brokerage": 309110,
       "alsoSeenOn": []
     },
     {
@@ -3591,6 +3721,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "substitute.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=substitute.com",
+      "listingType": "buynow",
+      "marketplace": 117189,
+      "auctionValue": 13931,
+      "brokerage": 223593,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "paisley.com",
       "source": "atom",
       "price": 415800,
@@ -3601,6 +3744,19 @@
       "marketplace": 117117,
       "auctionValue": 13466,
       "brokerage": 224937,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "dye.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=dye.com",
+      "listingType": "buynow",
+      "marketplace": 117007,
+      "auctionValue": 13882,
+      "brokerage": 222732,
       "alsoSeenOn": []
     },
     {
@@ -3734,19 +3890,6 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "longhorn.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=longhorn.com",
-      "listingType": "buynow",
-      "marketplace": 109533,
-      "auctionValue": 7068,
-      "brokerage": 233857,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "kabo.com",
       "source": "atom",
       "price": 495000,
@@ -3788,7 +3931,7 @@
     {
       "domain": "network.ai",
       "source": "atom",
-      "price": 795000,
+      "price": 793600,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Network.ai",
@@ -3835,19 +3978,6 @@
       "marketplace": 104820,
       "auctionValue": 15663,
       "brokerage": 191368,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "goj.com",
-      "source": "atom",
-      "price": 395000,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://www.atom.com/name/GOJ.com",
-      "listingType": "buynow",
-      "marketplace": 103780,
-      "auctionValue": 15510,
-      "brokerage": 189577,
       "alsoSeenOn": []
     },
     {
@@ -3900,19 +4030,6 @@
       "marketplace": 102652,
       "auctionValue": 15618,
       "brokerage": 186122,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "dbu.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=dbu.com",
-      "listingType": "buynow",
-      "marketplace": 102644,
-      "auctionValue": 15244,
-      "brokerage": 186914,
       "alsoSeenOn": []
     },
     {
@@ -3994,6 +4111,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "topdeal.com",
+      "source": "godaddy",
+      "price": 26,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://auctions.godaddy.com/",
+      "listingType": "auction",
+      "marketplace": 100287,
+      "auctionValue": 6700,
+      "brokerage": 225047,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "riv.com",
       "source": "atom",
       "price": 496000,
@@ -4033,6 +4163,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "viaje.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=viaje.com",
+      "listingType": "buynow",
+      "marketplace": 98860,
+      "auctionValue": 6747,
+      "brokerage": 212128,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "npx.com",
       "source": "atom",
       "price": 495000,
@@ -4043,19 +4186,6 @@
       "marketplace": 98601,
       "auctionValue": 14824,
       "brokerage": 178509,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "tlj.com",
-      "source": "atom",
-      "price": 274995,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://www.atom.com/name/TLJ.com",
-      "listingType": "buynow",
-      "marketplace": 97115,
-      "auctionValue": 14772,
-      "brokerage": 175840,
       "alsoSeenOn": []
     },
     {
@@ -4137,9 +4267,22 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "willows.com",
+      "source": "atom",
+      "price": 1250000,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/willows.com",
+      "listingType": "buynow",
+      "marketplace": 92209,
+      "auctionValue": 10061,
+      "brokerage": 174035,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "dx.org",
       "source": "atom",
-      "price": 119900,
+      "price": 118900,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Dx.org",
@@ -4176,9 +4319,35 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "deliberate.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=deliberate.com",
+      "listingType": "buynow",
+      "marketplace": 91308,
+      "auctionValue": 11028,
+      "brokerage": 170932,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "gcy.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=gcy.com",
+      "listingType": "buynow",
+      "marketplace": 90992,
+      "auctionValue": 13859,
+      "brokerage": 163463,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "berth.com",
       "source": "atom",
-      "price": 319698,
+      "price": 318398,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Berth.com",
@@ -4230,7 +4399,7 @@
     {
       "domain": "coupons.ai",
       "source": "atom",
-      "price": 150000,
+      "price": 250000,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Coupons.AI",
@@ -4274,7 +4443,7 @@
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Fourteen.com",
       "listingType": "buynow",
-      "marketplace": 88913,
+      "marketplace": 88912,
       "auctionValue": 10220,
       "brokerage": 168172,
       "alsoSeenOn": []
@@ -4334,7 +4503,7 @@
     {
       "domain": "researchpartners.com",
       "source": "atom",
-      "price": 12499,
+      "price": 12249,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/ResearchPartners.com",
@@ -4358,19 +4527,6 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "spiele.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=spiele.com",
-      "listingType": "buynow",
-      "marketplace": 86002,
-      "auctionValue": 4102,
-      "brokerage": 211584,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "unanimous.com",
       "source": "atom",
       "price": 1500000,
@@ -4381,19 +4537,6 @@
       "marketplace": 85792,
       "auctionValue": 9766,
       "brokerage": 161502,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "crypto.co",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=crypto.co",
-      "listingType": "buynow",
-      "marketplace": 84989,
-      "auctionValue": 4567,
-      "brokerage": 189683,
       "alsoSeenOn": []
     },
     {
@@ -4449,6 +4592,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "university.net",
+      "source": "sedo",
+      "price": 200000,
+      "currency": "EUR",
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=university.net",
+      "listingType": "buynow",
+      "marketplace": 83938,
+      "auctionValue": 10877,
+      "brokerage": 156624,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "justplay.com",
       "source": "atom",
       "price": 169000,
@@ -4488,6 +4644,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "hops.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=hops.com",
+      "listingType": "buynow",
+      "marketplace": 82491,
+      "auctionValue": 9365,
+      "brokerage": 153426,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "headhunter.com",
       "source": "atom",
       "price": 595995,
@@ -4511,19 +4680,6 @@
       "marketplace": 81620,
       "auctionValue": 5894,
       "brokerage": 175115,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "fqa.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=fqa.com",
-      "listingType": "buynow",
-      "marketplace": 81569,
-      "auctionValue": 12011,
-      "brokerage": 146095,
       "alsoSeenOn": []
     },
     {
@@ -4625,7 +4781,7 @@
       "auctionEnd": null,
       "link": "https://www.atom.com/name/jij.com",
       "listingType": "buynow",
-      "marketplace": 78671,
+      "marketplace": 78670,
       "auctionValue": 11888,
       "brokerage": 139907,
       "alsoSeenOn": []
@@ -4641,19 +4797,6 @@
       "marketplace": 78576,
       "auctionValue": 5412,
       "brokerage": 167731,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "bet.online",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=bet.online",
-      "listingType": "buynow",
-      "marketplace": 78135,
-      "auctionValue": 5207,
-      "brokerage": 170539,
       "alsoSeenOn": []
     },
     {
@@ -4680,6 +4823,19 @@
       "marketplace": 77649,
       "auctionValue": 3531,
       "brokerage": 224590,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "electricscooters.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=electricscooters.com",
+      "listingType": "buynow",
+      "marketplace": 77221,
+      "auctionValue": 3491,
+      "brokerage": 208649,
       "alsoSeenOn": []
     },
     {
@@ -4719,19 +4875,6 @@
       "marketplace": 76070,
       "auctionValue": 5862,
       "brokerage": 161146,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "delay.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=delay.com",
-      "listingType": "buynow",
-      "marketplace": 75785,
-      "auctionValue": 9169,
-      "brokerage": 140698,
       "alsoSeenOn": []
     },
     {
@@ -4813,6 +4956,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "dummy.com",
+      "source": "atom",
+      "price": 166233,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Dummy.com",
+      "listingType": "buynow",
+      "marketplace": 74513,
+      "auctionValue": 8695,
+      "brokerage": 139847,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "onething.com",
       "source": "atom",
       "price": 150999,
@@ -4836,19 +4992,6 @@
       "marketplace": 73913,
       "auctionValue": 4100,
       "brokerage": 168223,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "ventilator.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=ventilator.com",
-      "listingType": "buynow",
-      "marketplace": 73734,
-      "auctionValue": 4693,
-      "brokerage": 156812,
       "alsoSeenOn": []
     },
     {
@@ -4932,7 +5075,7 @@
     {
       "domain": "zfi.com",
       "source": "atom",
-      "price": 349595,
+      "price": 349745,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/ZFi.com",
@@ -5034,6 +5177,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "homeinvestment.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=homeinvestment.com",
+      "listingType": "buynow",
+      "marketplace": 68983,
+      "auctionValue": 4971,
+      "brokerage": 153075,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "manure.com",
       "source": "sedo",
       "price": null,
@@ -5057,6 +5213,19 @@
       "marketplace": 68623,
       "auctionValue": 6468,
       "brokerage": 136787,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "proportion.com",
+      "source": "sedo",
+      "price": 300000,
+      "currency": "EUR",
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=proportion.com",
+      "listingType": "buynow",
+      "marketplace": 68505,
+      "auctionValue": 7999,
+      "brokerage": 128259,
       "alsoSeenOn": []
     },
     {
@@ -5231,7 +5400,7 @@
     {
       "domain": "server.ai",
       "source": "atom",
-      "price": 700000,
+      "price": 698550,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Server.ai",
@@ -5239,32 +5408,6 @@
       "marketplace": 66149,
       "auctionValue": 5368,
       "brokerage": 134515,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "fondos.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=fondos.com",
-      "listingType": "buynow",
-      "marketplace": 66009,
-      "auctionValue": 6378,
-      "brokerage": 128279,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "distraction.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=distraction.com",
-      "listingType": "buynow",
-      "marketplace": 65768,
-      "auctionValue": 7909,
-      "brokerage": 122211,
       "alsoSeenOn": []
     },
     {
@@ -5309,7 +5452,7 @@
     {
       "domain": "x.page",
       "source": "dynadot",
-      "price": 15.2,
+      "price": 53,
       "currency": "USD",
       "auctionEnd": "2026-11-04T20:00:00.000Z",
       "link": "https://www.dynadot.com/market/auction/x.page",
@@ -5411,6 +5554,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "np.org",
+      "source": "sedo",
+      "price": 47000,
+      "currency": "EUR",
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=np.org",
+      "listingType": "buynow",
+      "marketplace": 63021,
+      "auctionValue": 8301,
+      "brokerage": 114523,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "baguette.com",
       "source": "atom",
       "price": 249500,
@@ -5421,19 +5577,6 @@
       "marketplace": 62994,
       "auctionValue": 4012,
       "brokerage": 138725,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "recital.com",
-      "source": "atom",
-      "price": 795000,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://www.atom.com/name/Recital.com",
-      "listingType": "buynow",
-      "marketplace": 62928,
-      "auctionValue": 6930,
-      "brokerage": 120093,
       "alsoSeenOn": []
     },
     {
@@ -5580,6 +5723,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "educating.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=educating.com",
+      "listingType": "buynow",
+      "marketplace": 61239,
+      "auctionValue": 7397,
+      "brokerage": 113518,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "longo.com",
       "source": "atom",
       "price": 389999,
@@ -5710,6 +5866,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "shall.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=shall.com",
+      "listingType": "buynow",
+      "marketplace": 59539,
+      "auctionValue": 6109,
+      "brokerage": 113852,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "waco.com",
       "source": "atom",
       "price": 250000,
@@ -5777,7 +5946,7 @@
     {
       "domain": "icube.com",
       "source": "atom",
-      "price": 170000,
+      "price": 168650,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/ICube.com",
@@ -5785,6 +5954,19 @@
       "marketplace": 58657,
       "auctionValue": 3235,
       "brokerage": 145575,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "vjd.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=vjd.com",
+      "listingType": "buynow",
+      "marketplace": 58656,
+      "auctionValue": 9070,
+      "brokerage": 103101,
       "alsoSeenOn": []
     },
     {
@@ -5816,7 +5998,7 @@
     {
       "domain": "gratis.ai",
       "source": "atom",
-      "price": 87638,
+      "price": 87438,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Gratis.AI",
@@ -5840,6 +6022,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "vwt.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=vwt.com",
+      "listingType": "buynow",
+      "marketplace": 58203,
+      "auctionValue": 8901,
+      "brokerage": 102283,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "childadoption.com",
       "source": "dynadot",
       "price": 1,
@@ -5850,6 +6045,19 @@
       "marketplace": 58033,
       "auctionValue": 1959,
       "brokerage": 164986,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "cyq.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=cyq.com",
+      "listingType": "buynow",
+      "marketplace": 58005,
+      "auctionValue": 8535,
+      "brokerage": 102946,
       "alsoSeenOn": []
     },
     {
@@ -5918,6 +6126,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "glute.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=glute.com",
+      "listingType": "buynow",
+      "marketplace": 57313,
+      "auctionValue": 4028,
+      "brokerage": 122287,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "powerplugs.com",
       "source": "atom",
       "price": 9995,
@@ -5928,6 +6149,19 @@
       "marketplace": 57311,
       "auctionValue": 3126,
       "brokerage": 139871,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "semen.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=semen.com",
+      "listingType": "buynow",
+      "marketplace": 56983,
+      "auctionValue": 5268,
+      "brokerage": 111046,
       "alsoSeenOn": []
     },
     {
@@ -5957,9 +6191,22 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "tipped.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=tipped.com",
+      "listingType": "buynow",
+      "marketplace": 56879,
+      "auctionValue": 5888,
+      "brokerage": 108578,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "aircharter.com",
       "source": "godaddy",
-      "price": 4250,
+      "price": 8800,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://auctions.godaddy.com/",
@@ -5972,7 +6219,7 @@
     {
       "domain": "easysmile.com",
       "source": "dynadot",
-      "price": 272,
+      "price": 287,
       "currency": "USD",
       "auctionEnd": "2026-11-04T12:59:53.000Z",
       "link": "https://www.dynadot.com/market/auction/easysmile.com",
@@ -5983,16 +6230,16 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "unusual.com",
+      "domain": "discretion.com",
       "source": "atom",
-      "price": 750000,
+      "price": 160000,
       "currency": "USD",
       "auctionEnd": null,
-      "link": "https://www.atom.com/name/Unusual.com",
+      "link": "https://www.atom.com/name/Discretion.com",
       "listingType": "buynow",
-      "marketplace": 56660,
-      "auctionValue": 6779,
-      "brokerage": 105304,
+      "marketplace": 56626,
+      "auctionValue": 6876,
+      "brokerage": 104776,
       "alsoSeenOn": []
     },
     {
@@ -6006,32 +6253,6 @@
       "marketplace": 56407,
       "auctionValue": 3015,
       "brokerage": 142290,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "injure.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=injure.com",
-      "listingType": "buynow",
-      "marketplace": 56277,
-      "auctionValue": 3697,
-      "brokerage": 117964,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "dvd.xin",
-      "source": "dynadot",
-      "price": 30.43,
-      "currency": "USD",
-      "auctionEnd": "2026-11-02T13:29:50.000Z",
-      "link": "https://www.dynadot.com/market/auction/dvd.xin",
-      "listingType": "auction",
-      "marketplace": 56055,
-      "auctionValue": 3374,
-      "brokerage": 116608,
       "alsoSeenOn": []
     },
     {
@@ -6061,19 +6282,6 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "contradict.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=contradict.com",
-      "listingType": "buynow",
-      "marketplace": 54856,
-      "auctionValue": 3712,
-      "brokerage": 117139,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "crossroad.com",
       "source": "atom",
       "price": 950000,
@@ -6089,7 +6297,7 @@
     {
       "domain": "energystore.com",
       "source": "atom",
-      "price": 562500,
+      "price": 625000,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/EnergyStore.com",
@@ -6167,7 +6375,7 @@
     {
       "domain": "log.net",
       "source": "atom",
-      "price": 48749,
+      "price": 49999,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Log.net",
@@ -6230,6 +6438,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "fright.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=fright.com",
+      "listingType": "buynow",
+      "marketplace": 52986,
+      "auctionValue": 6316,
+      "brokerage": 98774,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "passeddegree.com",
       "source": "dynadot",
       "price": 20,
@@ -6240,19 +6461,6 @@
       "marketplace": 52870,
       "auctionValue": 1873,
       "brokerage": 143527,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "authorizer.com",
-      "source": "atom",
-      "price": 24999,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://www.atom.com/name/Authorizer.com",
-      "listingType": "buynow",
-      "marketplace": 52468,
-      "auctionValue": 4028,
-      "brokerage": 107057,
       "alsoSeenOn": []
     },
     {
@@ -6269,22 +6477,9 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "moneysaving.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=moneysaving.com",
-      "listingType": "buynow",
-      "marketplace": 52234,
-      "auctionValue": 3154,
-      "brokerage": 120338,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "thereality.com",
       "source": "atom",
-      "price": 5999,
+      "price": 6900,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/TheReality.com",
@@ -6323,7 +6518,7 @@
     {
       "domain": "answer.io",
       "source": "atom",
-      "price": 298995,
+      "price": 298645,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Answer.io",
@@ -6401,7 +6596,7 @@
     {
       "domain": "pasta.co",
       "source": "atom",
-      "price": 29999,
+      "price": 28649,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Pasta.co",
@@ -6464,6 +6659,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "alana.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=alana.com",
+      "listingType": "buynow",
+      "marketplace": 49454,
+      "auctionValue": 5093,
+      "brokerage": 94132,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "sports.kaufen",
       "source": "dynadot",
       "price": 50,
@@ -6505,7 +6713,7 @@
     {
       "domain": "textbox.com",
       "source": "atom",
-      "price": 78700,
+      "price": 78850,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/TextBox.com",
@@ -6570,7 +6778,7 @@
     {
       "domain": "supersales.com",
       "source": "atom",
-      "price": 385000,
+      "price": 383750,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/SuperSales.com",
@@ -6609,7 +6817,7 @@
     {
       "domain": "master.ai",
       "source": "atom",
-      "price": 1249000,
+      "price": 1248700,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Master.ai",
@@ -6643,6 +6851,19 @@
       "marketplace": 47638,
       "auctionValue": 2551,
       "brokerage": 115315,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "reaffirm.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=reaffirm.com",
+      "listingType": "buynow",
+      "marketplace": 47563,
+      "auctionValue": 2847,
+      "brokerage": 111743,
       "alsoSeenOn": []
     },
     {
@@ -6685,22 +6906,9 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "digitalcasino.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=digitalcasino.com",
-      "listingType": "buynow",
-      "marketplace": 47249,
-      "auctionValue": 3658,
-      "brokerage": 98624,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "iflip.com",
       "source": "dynadot",
-      "price": 653,
+      "price": 809,
       "currency": "USD",
       "auctionEnd": "2026-11-09T16:00:00.000Z",
       "link": "https://www.dynadot.com/market/auction/iflip.com",
@@ -6734,19 +6942,6 @@
       "marketplace": 46637,
       "auctionValue": 4860,
       "brokerage": 89132,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "fqb.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=fqb.com",
-      "listingType": "buynow",
-      "marketplace": 46519,
-      "auctionValue": 6224,
-      "brokerage": 84650,
       "alsoSeenOn": []
     },
     {
@@ -6882,7 +7077,7 @@
     {
       "domain": "forger.com",
       "source": "atom",
-      "price": 298700,
+      "price": 299000,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/FORGER.com",
@@ -6916,6 +7111,19 @@
       "marketplace": 45661,
       "auctionValue": 6075,
       "brokerage": 83657,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "morale.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=morale.com",
+      "listingType": "buynow",
+      "marketplace": 45628,
+      "auctionValue": 4492,
+      "brokerage": 88371,
       "alsoSeenOn": []
     },
     {
@@ -6968,19 +7176,6 @@
       "marketplace": 45012,
       "auctionValue": 5824,
       "brokerage": 81773,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "extradition.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=extradition.com",
-      "listingType": "buynow",
-      "marketplace": 45000,
-      "auctionValue": 1699,
-      "brokerage": 98427,
       "alsoSeenOn": []
     },
     {
@@ -7064,7 +7259,7 @@
     {
       "domain": "sale.ai",
       "source": "atom",
-      "price": 2436000,
+      "price": 2436350,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Sale.AI",
@@ -7231,6 +7426,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "supervisory.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=supervisory.com",
+      "listingType": "buynow",
+      "marketplace": 43028,
+      "auctionValue": 4673,
+      "brokerage": 81328,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "braces.it",
       "source": "dynadot",
       "price": 223.64,
@@ -7259,7 +7467,7 @@
     {
       "domain": "taglist.com",
       "source": "atom",
-      "price": 26849,
+      "price": 26999,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/TagList.com",
@@ -7267,6 +7475,19 @@
       "marketplace": 42859,
       "auctionValue": 2781,
       "brokerage": 93139,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "zano.com",
+      "source": "sedo",
+      "price": 519.808163,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=zano.com",
+      "listingType": "buynow",
+      "marketplace": 42657,
+      "auctionValue": 5334,
+      "brokerage": 78147,
       "alsoSeenOn": []
     },
     {
@@ -7285,7 +7506,7 @@
     {
       "domain": "cler.com",
       "source": "godaddy",
-      "price": 10000,
+      "price": 10250,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://auctions.godaddy.com/",
@@ -7322,22 +7543,22 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "data.tech",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
+      "domain": "amcs.com",
+      "source": "godaddy",
+      "price": 621,
+      "currency": "USD",
       "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=data.tech",
-      "listingType": "buynow",
-      "marketplace": 42417,
-      "auctionValue": 3322,
-      "brokerage": 88063,
+      "link": "https://auctions.godaddy.com/",
+      "listingType": "auction",
+      "marketplace": 42306,
+      "auctionValue": 4400,
+      "brokerage": 80805,
       "alsoSeenOn": []
     },
     {
       "domain": "cavi.com",
       "source": "atom",
-      "price": 124355,
+      "price": 124255,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Cavi.com",
@@ -7363,7 +7584,7 @@
     {
       "domain": "rosella.com",
       "source": "atom",
-      "price": 2198950,
+      "price": 2200000,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Rosella.com",
@@ -7376,7 +7597,7 @@
     {
       "domain": "fuelit.com",
       "source": "atom",
-      "price": 20396,
+      "price": 23995,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Fuelit.com",
@@ -7439,6 +7660,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "retrack.com",
+      "source": "atom",
+      "price": 175161,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Retrack.com",
+      "listingType": "buynow",
+      "marketplace": 41820,
+      "auctionValue": 3427,
+      "brokerage": 88726,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "realty.studio",
       "source": "godaddy",
       "price": 1,
@@ -7491,22 +7725,9 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "eth.direct",
-      "source": "dynadot",
-      "price": 7.99,
-      "currency": "USD",
-      "auctionEnd": "2026-11-01T20:00:00.000Z",
-      "link": "https://www.dynadot.com/market/auction/eth.direct",
-      "listingType": "auction",
-      "marketplace": 41261,
-      "auctionValue": 1901,
-      "brokerage": 91685,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "yourschool.com",
       "source": "atom",
-      "price": 45395,
+      "price": 44095,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/YourSchool.com",
@@ -7530,16 +7751,16 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "pen.co",
-      "source": "godaddy",
-      "price": 3149,
+      "domain": "spector.com",
+      "source": "atom",
+      "price": 189695,
       "currency": "USD",
       "auctionEnd": null,
-      "link": "https://auctions.godaddy.com/",
-      "listingType": "auction",
+      "link": "https://www.atom.com/name/Spector.com",
+      "listingType": "buynow",
       "marketplace": 41142,
-      "auctionValue": 4060,
-      "brokerage": 81831,
+      "auctionValue": 3079,
+      "brokerage": 85441,
       "alsoSeenOn": []
     },
     {
@@ -7610,7 +7831,7 @@
     {
       "domain": "tailoring.com",
       "source": "atom",
-      "price": 194800,
+      "price": 194500,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Tailoring.com",
@@ -7675,7 +7896,7 @@
     {
       "domain": "jumpgames.com",
       "source": "atom",
-      "price": 14295,
+      "price": 12151,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/JumpGames.com",
@@ -7738,6 +7959,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "admirer.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=admirer.com",
+      "listingType": "buynow",
+      "marketplace": 39815,
+      "auctionValue": 3244,
+      "brokerage": 80289,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "smartblog.com",
       "source": "atom",
       "price": 24999,
@@ -7748,19 +7982,6 @@
       "marketplace": 39786,
       "auctionValue": 3594,
       "brokerage": 79731,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "wotch.com",
-      "source": "atom",
-      "price": 16499,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://www.atom.com/name/Wotch.com",
-      "listingType": "buynow",
-      "marketplace": 39665,
-      "auctionValue": 3251,
-      "brokerage": 79318,
       "alsoSeenOn": []
     },
     {
@@ -7842,19 +8063,6 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "sopranos.com",
-      "source": "atom",
-      "price": 87950,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://www.atom.com/name/Sopranos.com",
-      "listingType": "buynow",
-      "marketplace": 39026,
-      "auctionValue": 2544,
-      "brokerage": 82646,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "propagation.com",
       "source": "atom",
       "price": 129888,
@@ -7868,9 +8076,22 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "phoenix.io",
+      "source": "atom",
+      "price": 349995,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Phoenix.io",
+      "listingType": "buynow",
+      "marketplace": 38879,
+      "auctionValue": 2927,
+      "brokerage": 80380,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "icey.com",
       "source": "sedo",
-      "price": 60,
+      "price": 70,
       "currency": "USD",
       "auctionEnd": "2026-11-07T00:44:13.000Z",
       "link": "https://sedo.com/search/details/?domain=icey.com",
@@ -7883,7 +8104,7 @@
     {
       "domain": "voba.com",
       "source": "atom",
-      "price": 308999,
+      "price": 395000,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/VOBA.com",
@@ -7896,7 +8117,7 @@
     {
       "domain": "wisdom.net",
       "source": "atom",
-      "price": 88776,
+      "price": 87326,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Wisdom.net",
@@ -7909,7 +8130,7 @@
     {
       "domain": "womenonly.com",
       "source": "atom",
-      "price": 13449,
+      "price": 13399,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/WomenOnly.com",
@@ -7982,19 +8203,6 @@
       "marketplace": 37679,
       "auctionValue": 2782,
       "brokerage": 81767,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "decoy.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=decoy.com",
-      "listingType": "buynow",
-      "marketplace": 37660,
-      "auctionValue": 3074,
-      "brokerage": 76341,
       "alsoSeenOn": []
     },
     {
@@ -8078,14 +8286,27 @@
     {
       "domain": "park.mobi",
       "source": "godaddy",
-      "price": 50,
+      "price": 40,
       "currency": "USD",
-      "auctionEnd": "2026-11-01T20:19:00.000Z",
+      "auctionEnd": "2026-11-02T20:19:00.000Z",
       "link": "https://www.godaddy.com/domain-auctions/park-mobi-733844343?isc=json_closeouts",
       "listingType": "buynow",
       "marketplace": 36985,
       "auctionValue": 1719,
       "brokerage": 79653,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "revolution.net",
+      "source": "atom",
+      "price": 119850,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Revolution.net",
+      "listingType": "buynow",
+      "marketplace": 36935,
+      "auctionValue": 4585,
+      "brokerage": 69282,
       "alsoSeenOn": []
     },
     {
@@ -8143,7 +8364,7 @@
     {
       "domain": "group.io",
       "source": "atom",
-      "price": 349995,
+      "price": 348745,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Group.io",
@@ -8177,6 +8398,19 @@
       "marketplace": 36272,
       "auctionValue": 4268,
       "brokerage": 67362,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "tea.ai",
+      "source": "atom",
+      "price": 461195,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/tea.ai",
+      "listingType": "buynow",
+      "marketplace": 36211,
+      "auctionValue": 3154,
+      "brokerage": 73528,
       "alsoSeenOn": []
     },
     {
@@ -8336,19 +8570,6 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "accomplished.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
-      "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=accomplished.com",
-      "listingType": "buynow",
-      "marketplace": 35693,
-      "auctionValue": 3570,
-      "brokerage": 68528,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "misses.com",
       "source": "atom",
       "price": 437000,
@@ -8377,7 +8598,7 @@
     {
       "domain": "myfuel.com",
       "source": "atom",
-      "price": 50571,
+      "price": 59495,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/MyFuel.com",
@@ -8416,7 +8637,7 @@
     {
       "domain": "sifi.com",
       "source": "atom",
-      "price": 198950,
+      "price": 198500,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Sifi.com",
@@ -8533,7 +8754,7 @@
     {
       "domain": "carried.com",
       "source": "atom",
-      "price": 550000,
+      "price": 548950,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Carried.com",
@@ -8559,7 +8780,7 @@
     {
       "domain": "tradeexchange.com",
       "source": "atom",
-      "price": 3600000,
+      "price": 4000000,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/TradeExchange.com",
@@ -8609,6 +8830,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "chaintech.com",
+      "source": "atom",
+      "price": 230000,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/ChainTech.com",
+      "listingType": "buynow",
+      "marketplace": 34707,
+      "auctionValue": 3785,
+      "brokerage": 66712,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "adam.co",
       "source": "parkio",
       "price": null,
@@ -8650,7 +8884,7 @@
     {
       "domain": "dovish.com",
       "source": "atom",
-      "price": 13095,
+      "price": 11556,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Dovish.com",
@@ -8704,7 +8938,7 @@
       "source": "dynadot",
       "price": 1,
       "currency": "USD",
-      "auctionEnd": "2026-11-02T20:16:14.019Z",
+      "auctionEnd": "2026-11-09T20:18:14.912Z",
       "link": "https://www.dynadot.com/market/auction/taluk.de",
       "listingType": "auction",
       "marketplace": 34206,
@@ -8739,6 +8973,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "drycleaner.com",
+      "source": "sedo",
+      "price": 100000,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=drycleaner.com",
+      "listingType": "buynow",
+      "marketplace": 34182,
+      "auctionValue": 1579,
+      "brokerage": 81576,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "shifters.com",
       "source": "atom",
       "price": 112000,
@@ -8767,7 +9014,7 @@
     {
       "domain": "deals.ai",
       "source": "atom",
-      "price": 150000,
+      "price": 250000,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Deals.ai",
@@ -8843,6 +9090,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "facia.com",
+      "source": "atom",
+      "price": 98888,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Facia.com",
+      "listingType": "buynow",
+      "marketplace": 33833,
+      "auctionValue": 2959,
+      "brokerage": 68248,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "veles.com",
       "source": "atom",
       "price": 250000,
@@ -8853,6 +9113,19 @@
       "marketplace": 33831,
       "auctionValue": 2832,
       "brokerage": 68130,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "armadas.com",
+      "source": "atom",
+      "price": 18095,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Armadas.com",
+      "listingType": "buynow",
+      "marketplace": 33777,
+      "auctionValue": 2713,
+      "brokerage": 67651,
       "alsoSeenOn": []
     },
     {
@@ -8895,19 +9168,6 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "oden.com",
-      "source": "atom",
-      "price": 351000,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://www.atom.com/name/Oden.com",
-      "listingType": "buynow",
-      "marketplace": 33682,
-      "auctionValue": 2591,
-      "brokerage": 68063,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "itax.global",
       "source": "godaddy",
       "price": 1,
@@ -8931,6 +9191,19 @@
       "marketplace": 33565,
       "auctionValue": 2255,
       "brokerage": 72469,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "forebear.com",
+      "source": "atom",
+      "price": 13495,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Forebear.com",
+      "listingType": "buynow",
+      "marketplace": 33550,
+      "auctionValue": 2038,
+      "brokerage": 74495,
       "alsoSeenOn": []
     },
     {
@@ -8962,7 +9235,7 @@
     {
       "domain": "master.io",
       "source": "atom",
-      "price": 398795,
+      "price": 398845,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Master.io",
@@ -8970,19 +9243,6 @@
       "marketplace": 33481,
       "auctionValue": 2986,
       "brokerage": 66623,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "mia.xin",
-      "source": "dynadot",
-      "price": 30.43,
-      "currency": "USD",
-      "auctionEnd": "2026-11-02T13:59:50.000Z",
-      "link": "https://www.dynadot.com/market/auction/mia.xin",
-      "listingType": "auction",
-      "marketplace": 33474,
-      "auctionValue": 1753,
-      "brokerage": 68585,
       "alsoSeenOn": []
     },
     {
@@ -9016,7 +9276,7 @@
       "source": "dynadot",
       "price": 20,
       "currency": "USD",
-      "auctionEnd": "2026-11-02T11:10:00.000Z",
+      "auctionEnd": "2026-11-05T11:10:00.000Z",
       "link": "https://www.dynadot.com/market/auction/heartloss.com",
       "listingType": "auction",
       "marketplace": 33403,
@@ -9126,6 +9386,19 @@
       "marketplace": 33033,
       "auctionValue": 1968,
       "brokerage": 72815,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "skytrack.com",
+      "source": "atom",
+      "price": 65000,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/SkyTrack.com",
+      "listingType": "buynow",
+      "marketplace": 33012,
+      "auctionValue": 2818,
+      "brokerage": 68407,
       "alsoSeenOn": []
     },
     {
@@ -9261,7 +9534,7 @@
     {
       "domain": "imega.com",
       "source": "atom",
-      "price": 150610,
+      "price": 149210,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/iMega.com",
@@ -9300,7 +9573,7 @@
     {
       "domain": "invent.io",
       "source": "atom",
-      "price": 199845,
+      "price": 200995,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Invent.io",
@@ -9313,7 +9586,7 @@
     {
       "domain": "poetry.ai",
       "source": "atom",
-      "price": 87638,
+      "price": 87888,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Poetry.AI",
@@ -9334,6 +9607,32 @@
       "marketplace": 31880,
       "auctionValue": 1660,
       "brokerage": 70166,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "xudin.com",
+      "source": "dynadot",
+      "price": 7.99,
+      "currency": "USD",
+      "auctionEnd": "2026-11-09T00:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/xudin.com",
+      "listingType": "auction",
+      "marketplace": 31867,
+      "auctionValue": 1025,
+      "brokerage": 71313,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "tradesoft.com",
+      "source": "godaddy",
+      "price": 15,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://auctions.godaddy.com/",
+      "listingType": "auction",
+      "marketplace": 31769,
+      "auctionValue": 3264,
+      "brokerage": 61733,
       "alsoSeenOn": []
     },
     {
@@ -9389,16 +9688,16 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "meth.global",
-      "source": "godaddy",
-      "price": 5,
+      "domain": "rentalist.com",
+      "source": "atom",
+      "price": 30000,
       "currency": "USD",
-      "auctionEnd": "2026-11-01T20:28:00.000Z",
-      "link": "https://www.godaddy.com/domain-auctions/meth-global-733203785?isc=json_closeouts",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Rentalist.com",
       "listingType": "buynow",
-      "marketplace": 31649,
-      "auctionValue": 4244,
-      "brokerage": 60531,
+      "marketplace": 31624,
+      "auctionValue": 1638,
+      "brokerage": 66004,
       "alsoSeenOn": []
     },
     {
@@ -9443,7 +9742,7 @@
     {
       "domain": "seelive.com",
       "source": "atom",
-      "price": 42399,
+      "price": 40999,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/SeeLive.com",
@@ -9545,6 +9844,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "autorent.com",
+      "source": "atom",
+      "price": 252000,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/AutoRent.com",
+      "listingType": "buynow",
+      "marketplace": 31236,
+      "auctionValue": 2265,
+      "brokerage": 65111,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "tania.com",
       "source": "atom",
       "price": 250000,
@@ -9612,7 +9924,7 @@
     {
       "domain": "eufora.com",
       "source": "godaddy",
-      "price": 72,
+      "price": 1325,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://auctions.godaddy.com/",
@@ -9620,6 +9932,19 @@
       "marketplace": 31145,
       "auctionValue": 1676,
       "brokerage": 69893,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "contributed.com",
+      "source": "sedo",
+      "price": null,
+      "currency": null,
+      "auctionEnd": null,
+      "link": "https://sedo.com/search/details/?domain=contributed.com",
+      "listingType": "buynow",
+      "marketplace": 31140,
+      "auctionValue": 3465,
+      "brokerage": 58159,
       "alsoSeenOn": []
     },
     {
@@ -9662,9 +9987,22 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "signature.ai",
+      "source": "atom",
+      "price": 495000,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Signature.AI",
+      "listingType": "buynow",
+      "marketplace": 31055,
+      "auctionValue": 2476,
+      "brokerage": 63268,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "gaminghub.com",
       "source": "atom",
-      "price": 318600,
+      "price": 318950,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/GamingHub.com",
@@ -9703,7 +10041,7 @@
     {
       "domain": "transfer.io",
       "source": "atom",
-      "price": 398595,
+      "price": 398895,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Transfer.io",
@@ -9963,7 +10301,7 @@
     {
       "domain": "natta.com",
       "source": "atom",
-      "price": 144888,
+      "price": 164888,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Natta.com",
@@ -9974,16 +10312,16 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "speelt.com",
-      "source": "dynadot",
-      "price": 90,
+      "domain": "zonda.com",
+      "source": "atom",
+      "price": 750000,
       "currency": "USD",
-      "auctionEnd": "2026-11-02T02:33:56.509Z",
-      "link": "https://www.dynadot.com/market/auction/speelt.com",
-      "listingType": "auction",
-      "marketplace": 30000,
-      "auctionValue": 1473,
-      "brokerage": 64544,
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Zonda.com",
+      "listingType": "buynow",
+      "marketplace": 29936,
+      "auctionValue": 2379,
+      "brokerage": 60576,
       "alsoSeenOn": []
     },
     {
@@ -10093,7 +10431,7 @@
     {
       "domain": "justpaid.com",
       "source": "atom",
-      "price": 37849,
+      "price": 38999,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/JustPaid.com",
@@ -10114,19 +10452,6 @@
       "marketplace": 29593,
       "auctionValue": 2196,
       "brokerage": 61305,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "lifelogic.com",
-      "source": "atom",
-      "price": 123795,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://www.atom.com/name/LifeLogic.com",
-      "listingType": "buynow",
-      "marketplace": 29560,
-      "auctionValue": 2977,
-      "brokerage": 57588,
       "alsoSeenOn": []
     },
     {
@@ -10221,19 +10546,6 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "desktopwindows.com",
-      "source": "godaddy",
-      "price": 5,
-      "currency": "USD",
-      "auctionEnd": "2026-11-01T18:01:00.000Z",
-      "link": "https://www.godaddy.com/domain-auctions/desktopwindows-com-733315228?isc=json_closeouts",
-      "listingType": "buynow",
-      "marketplace": 29356,
-      "auctionValue": 1220,
-      "brokerage": 66282,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "festive.com",
       "source": "atom",
       "price": 977500,
@@ -10273,22 +10585,9 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "responsivity.com",
-      "source": "dynadot",
-      "price": 7.99,
-      "currency": "USD",
-      "auctionEnd": "2026-11-02T18:00:00.000Z",
-      "link": "https://www.dynadot.com/market/auction/responsivity.com",
-      "listingType": "auction",
-      "marketplace": 29113,
-      "auctionValue": 1696,
-      "brokerage": 65592,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "puzzle.ai",
       "source": "atom",
-      "price": 150000,
+      "price": 185000,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Puzzle.AI",
@@ -10296,32 +10595,6 @@
       "marketplace": 29054,
       "auctionValue": 2511,
       "brokerage": 57732,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "bankmarket.com",
-      "source": "atom",
-      "price": 20895,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://www.atom.com/name/BankMarket.com",
-      "listingType": "buynow",
-      "marketplace": 29033,
-      "auctionValue": 2419,
-      "brokerage": 58437,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "financepros.com",
-      "source": "atom",
-      "price": 145000,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://www.atom.com/name/FinancePros.com",
-      "listingType": "buynow",
-      "marketplace": 28997,
-      "auctionValue": 2776,
-      "brokerage": 57177,
       "alsoSeenOn": []
     },
     {
@@ -10351,22 +10624,22 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "ravioli.com",
-      "source": "sedo",
-      "price": null,
-      "currency": null,
+      "domain": "breccia.com",
+      "source": "atom",
+      "price": 26995,
+      "currency": "USD",
       "auctionEnd": null,
-      "link": "https://sedo.com/search/details/?domain=ravioli.com",
+      "link": "https://www.atom.com/name/Breccia.com",
       "listingType": "buynow",
-      "marketplace": 28917,
-      "auctionValue": 1630,
-      "brokerage": 62062,
+      "marketplace": 28902,
+      "auctionValue": 1363,
+      "brokerage": 62479,
       "alsoSeenOn": []
     },
     {
       "domain": "cyberboard.com",
       "source": "godaddy",
-      "price": 60,
+      "price": 138,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://auctions.godaddy.com/",
@@ -10392,7 +10665,7 @@
     {
       "domain": "clickhub.com",
       "source": "atom",
-      "price": 55110,
+      "price": 68888,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/ClickHub.com",
@@ -10400,6 +10673,19 @@
       "marketplace": 28815,
       "auctionValue": 2573,
       "brokerage": 57204,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "barite.com",
+      "source": "atom",
+      "price": 13495,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Barite.com",
+      "listingType": "buynow",
+      "marketplace": 28805,
+      "auctionValue": 2101,
+      "brokerage": 58293,
       "alsoSeenOn": []
     },
     {
@@ -10426,6 +10712,45 @@
       "marketplace": 28784,
       "auctionValue": 2469,
       "brokerage": 57596,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "casestudy.com",
+      "source": "atom",
+      "price": 92999,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/CaseStudy.com",
+      "listingType": "buynow",
+      "marketplace": 28759,
+      "auctionValue": 1091,
+      "brokerage": 74281,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "chemistrytesting.com",
+      "source": "dynadot",
+      "price": 7.99,
+      "currency": "USD",
+      "auctionEnd": "2026-11-09T00:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/chemistrytesting.com",
+      "listingType": "auction",
+      "marketplace": 28739,
+      "auctionValue": 1524,
+      "brokerage": 60788,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "gape.com",
+      "source": "atom",
+      "price": 275000,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Gape.com",
+      "listingType": "buynow",
+      "marketplace": 28718,
+      "auctionValue": 2162,
+      "brokerage": 57693,
       "alsoSeenOn": []
     },
     {
@@ -10522,7 +10847,7 @@
     {
       "domain": "hypersonic.com",
       "source": "atom",
-      "price": 1100000,
+      "price": 1000000,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Hypersonic.com",
@@ -10533,9 +10858,22 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "royalty.net",
+      "source": "atom",
+      "price": 26900,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Royalty.net",
+      "listingType": "buynow",
+      "marketplace": 28373,
+      "auctionValue": 3640,
+      "brokerage": 52661,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "jetit.com",
       "source": "godaddy",
-      "price": 449,
+      "price": 1825,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://auctions.godaddy.com/",
@@ -10569,19 +10907,6 @@
       "marketplace": 28276,
       "auctionValue": 1531,
       "brokerage": 61203,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "mobimax.com",
-      "source": "atom",
-      "price": 349995,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://www.atom.com/name/MobiMax.com",
-      "listingType": "buynow",
-      "marketplace": 28256,
-      "auctionValue": 2498,
-      "brokerage": 55959,
       "alsoSeenOn": []
     },
     {
@@ -10639,7 +10964,7 @@
     {
       "domain": "redforest.com",
       "source": "atom",
-      "price": 13499,
+      "price": 13349,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/RedForest.com",
@@ -10663,16 +10988,16 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "freightplanes.com",
-      "source": "godaddy",
-      "price": 1,
+      "domain": "jupiter.io",
+      "source": "atom",
+      "price": 250000,
       "currency": "USD",
       "auctionEnd": null,
-      "link": "https://auctions.godaddy.com/",
-      "listingType": "auction",
-      "marketplace": 27930,
-      "auctionValue": 408,
-      "brokerage": 70779,
+      "link": "https://www.atom.com/name/Jupiter.io",
+      "listingType": "buynow",
+      "marketplace": 28006,
+      "auctionValue": 2075,
+      "brokerage": 58021,
       "alsoSeenOn": []
     },
     {
@@ -10754,19 +11079,6 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "calls.mobi",
-      "source": "dynadot",
-      "price": 7.99,
-      "currency": "USD",
-      "auctionEnd": "2026-11-01T20:09:58.000Z",
-      "link": "https://www.dynadot.com/market/auction/calls.mobi",
-      "listingType": "auction",
-      "marketplace": 27608,
-      "auctionValue": 1071,
-      "brokerage": 60692,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "arriva.com",
       "source": "atom",
       "price": 486495,
@@ -10803,6 +11115,19 @@
       "marketplace": 27576,
       "auctionValue": 4388,
       "brokerage": 49617,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "chillies.com",
+      "source": "atom",
+      "price": 20355,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Chillies.com",
+      "listingType": "buynow",
+      "marketplace": 27575,
+      "auctionValue": 2531,
+      "brokerage": 53900,
       "alsoSeenOn": []
     },
     {
@@ -10845,19 +11170,6 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "fluorescent.com",
-      "source": "atom",
-      "price": 143750,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://www.atom.com/name/Fluorescent.com",
-      "listingType": "buynow",
-      "marketplace": 27443,
-      "auctionValue": 2608,
-      "brokerage": 52990,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "chaser.com",
       "source": "atom",
       "price": 375000,
@@ -10894,6 +11206,19 @@
       "marketplace": 27339,
       "auctionValue": 1303,
       "brokerage": 59897,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "refugia.com",
+      "source": "atom",
+      "price": 38995,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Refugia.com",
+      "listingType": "buynow",
+      "marketplace": 27336,
+      "auctionValue": 1318,
+      "brokerage": 60277,
       "alsoSeenOn": []
     },
     {
@@ -10959,6 +11284,19 @@
       "marketplace": 27162,
       "auctionValue": 1567,
       "brokerage": 58087,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "stepsix.com",
+      "source": "atom",
+      "price": 4895,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/StepSix.com",
+      "listingType": "buynow",
+      "marketplace": 27122,
+      "auctionValue": 1789,
+      "brokerage": 56777,
       "alsoSeenOn": []
     },
     {
@@ -11068,7 +11406,7 @@
     {
       "domain": "database.io",
       "source": "atom",
-      "price": 98650,
+      "price": 98600,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Database.io",
@@ -11120,7 +11458,7 @@
     {
       "domain": "plant.io",
       "source": "atom",
-      "price": 78897,
+      "price": 78847,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Plant.io",
@@ -11133,7 +11471,7 @@
     {
       "domain": "starshine.com",
       "source": "atom",
-      "price": 129111,
+      "price": 128011,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Starshine.com",
@@ -11167,19 +11505,6 @@
       "marketplace": 26650,
       "auctionValue": 3581,
       "brokerage": 52666,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "showcast.com",
-      "source": "atom",
-      "price": 175000,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://www.atom.com/name/ShowCast.com",
-      "listingType": "buynow",
-      "marketplace": 26594,
-      "auctionValue": 2310,
-      "brokerage": 52187,
       "alsoSeenOn": []
     },
     {
@@ -11302,7 +11627,7 @@
     {
       "domain": "document.co",
       "source": "atom",
-      "price": 193850,
+      "price": 195000,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Document.co",
@@ -11375,6 +11700,19 @@
       "marketplace": 26404,
       "auctionValue": 2852,
       "brokerage": 50211,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "exude.com",
+      "source": "atom",
+      "price": 595000,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Exude.com",
+      "listingType": "buynow",
+      "marketplace": 26403,
+      "auctionValue": 1713,
+      "brokerage": 55214,
       "alsoSeenOn": []
     },
     {
@@ -11599,6 +11937,19 @@
       "alsoSeenOn": []
     },
     {
+      "domain": "healthylbs.com",
+      "source": "dynadot",
+      "price": 7.99,
+      "currency": "USD",
+      "auctionEnd": "2026-11-12T20:00:00.000Z",
+      "link": "https://www.dynadot.com/market/auction/healthylbs.com",
+      "listingType": "auction",
+      "marketplace": 25876,
+      "auctionValue": 1094,
+      "brokerage": 60279,
+      "alsoSeenOn": []
+    },
+    {
       "domain": "fantasy.io",
       "source": "atom",
       "price": 157999,
@@ -11635,6 +11986,19 @@
       "marketplace": 25775,
       "auctionValue": 1891,
       "brokerage": 51731,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "tradesense.com",
+      "source": "atom",
+      "price": 99995,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/TradeSense.com",
+      "listingType": "buynow",
+      "marketplace": 25775,
+      "auctionValue": 2133,
+      "brokerage": 52308,
       "alsoSeenOn": []
     },
     {
@@ -11729,45 +12093,6 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "roadies.com",
-      "source": "atom",
-      "price": 39999,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://www.atom.com/name/Roadies.com",
-      "listingType": "buynow",
-      "marketplace": 25660,
-      "auctionValue": 1911,
-      "brokerage": 51652,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "evangelicalwomen.com",
-      "source": "godaddy",
-      "price": 1,
-      "currency": "USD",
-      "auctionEnd": null,
-      "link": "https://auctions.godaddy.com/",
-      "listingType": "auction",
-      "marketplace": 25650,
-      "auctionValue": 790,
-      "brokerage": 57633,
-      "alsoSeenOn": []
-    },
-    {
-      "domain": "doll.xin",
-      "source": "dynadot",
-      "price": 28.05,
-      "currency": "USD",
-      "auctionEnd": "2026-11-02T13:44:50.000Z",
-      "link": "https://www.dynadot.com/market/auction/doll.xin",
-      "listingType": "auction",
-      "marketplace": 25622,
-      "auctionValue": 1132,
-      "brokerage": 53577,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "peopletrust.com",
       "source": "atom",
       "price": 17999,
@@ -11778,6 +12103,19 @@
       "marketplace": 25571,
       "auctionValue": 2005,
       "brokerage": 52385,
+      "alsoSeenOn": []
+    },
+    {
+      "domain": "mono.ai",
+      "source": "atom",
+      "price": 277995,
+      "currency": "USD",
+      "auctionEnd": null,
+      "link": "https://www.atom.com/name/Mono.ai",
+      "listingType": "buynow",
+      "marketplace": 25532,
+      "auctionValue": 2084,
+      "brokerage": 51012,
       "alsoSeenOn": []
     },
     {
@@ -11794,22 +12132,9 @@
       "alsoSeenOn": []
     },
     {
-      "domain": "mtt.global",
-      "source": "godaddy",
-      "price": 5,
-      "currency": "USD",
-      "auctionEnd": "2026-11-01T18:01:00.000Z",
-      "link": "https://www.godaddy.com/domain-auctions/mtt-global-733209203?isc=json_closeouts",
-      "listingType": "buynow",
-      "marketplace": 25488,
-      "auctionValue": 4080,
-      "brokerage": 45736,
-      "alsoSeenOn": []
-    },
-    {
       "domain": "pixelation.com",
       "source": "atom",
-      "price": 29495,
+      "price": 28445,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/Pixelation.com",
@@ -11848,7 +12173,7 @@
     {
       "domain": "digibyte.com",
       "source": "atom",
-      "price": 168900,
+      "price": 167650,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/DigiByte.com",
@@ -11941,7 +12266,7 @@
       "source": "dynadot",
       "price": 20,
       "currency": "USD",
-      "auctionEnd": "2026-11-02T07:05:00.000Z",
+      "auctionEnd": "2026-11-05T07:05:00.000Z",
       "link": "https://www.dynadot.com/market/auction/glasscastings.com",
       "listingType": "auction",
       "marketplace": 25294,
@@ -12082,7 +12407,7 @@
     {
       "domain": "findcash.com",
       "source": "atom",
-      "price": 63499,
+      "price": 63899,
       "currency": "USD",
       "auctionEnd": null,
       "link": "https://www.atom.com/name/FindCash.com",
@@ -12094,11 +12419,11 @@
     }
   ],
   "stats": {
-    "fetched": 2311312,
-    "kept": 272663,
-    "valued": 272663,
-    "above": 930,
-    "highestMarketplace": 10037078,
+    "fetched": 2307959,
+    "kept": 277408,
+    "valued": 277408,
+    "above": 955,
+    "highestMarketplace": 12437416,
     "truncated": false
   }
 }
